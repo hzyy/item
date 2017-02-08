@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=200, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>《coc》我有话说</title>
+<link rel="stylesheet" href="../../../lib/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" href="../../../lib/confirm/confirm.css" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+	<div id="main" style="margin-bottom: 40px;">
+		<img src="../images/coc2.jpg"  class="bg_pic">
+		<div style="width: 100%;">
+			<div class="container" style="border-bottom: 1px #ddd solid; padding: 5px; background: #FFFFFF;">
+				共<span id="commentCount">0</span>条评论
+			</div>
+			<div class="container" id="comment" style="padding: 5px; background: #FFFFFF;"></div>
+		</div>
+	</div>
+
+	<div id="footer" style="display:none;">
+		<form name="form" id="form">
+			<input type="file" id="file" style="display: none" accept="image/jpeg,image/png,image/gif,image/bmp" /><br>
+			<div class="img">
+				<img src="" id="img0">
+			</div>
+		</form>
+		<a href="javascript:;" class="add" id="selectFile"><i class="glyphicon glyphicon-picture icon"></i></a><input type="text" id="answer" placeholder="&nbsp;此处输入评论" /> <input type="button" style="width:60px;" id="submit" value="提交"/>
+	</div>
+	<script src="../../../lib/jquery/js/jquery.min.js"></script>
+	<script src="../../../lib/oss/aliyun-sdk.min.js"></script>
+	<script src="../../../lib/oss/oss-js-upload.js"></script>
+	<script src="../../../lib/md5/spark-md5.js"></script>
+	<script src="../../../lib/localresize/lrz.bundle.js"></script>
+	<script src="../../../lib/emoji/emoji.js"></script>
+	<script src="../../../lib/confirm/confirm.js"></script>
+	<script src="../../../lib/upload/upload.js"></script>
+	<script src="main.js"></script>
+</body>
+</html>

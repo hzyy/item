@@ -1,0 +1,903 @@
+@charset "UTF-8";
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+    clear: both; }
+
+html {
+    font-family: Microsoft YaHei, Helvetica Neue, Helvetica, Roboto, Heiti SC, STHeiTi, Arial, sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    font-size: 62.5%;
+    line-height: 1.5; }
+
+body {
+    font-size: 1.6rem;
+    overflow-x: hidden;
+    min-width: 320px;
+    color: #1a1a1a;
+    background: #f2f2f2; }
+
+a {
+    background: transparent;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+    color: #1a1a1a; }
+
+a:active {
+    color: #3990e6;
+    outline: 0; }
+
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline; }
+
+audio:not([controls]) {
+    display: none;
+    height: 0; }
+
+svg:not(:root) {
+    overflow: hidden; }
+
+hr {
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0; }
+
+pre {
+    overflow: auto;
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word; }
+
+code, kbd, pre, samp {
+    font-family: monospace;
+    font-size: 1rem; }
+
+mark {
+    background: #ff0;
+    color: #1a1a1a; }
+
+dfn {
+    font-style: italic; }
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+
+td, th {
+    padding: 0; }
+
+ul, ol {
+    list-style: none outside none; }
+
+h1, h2, h3, strong {
+    font-weight: normal; }
+
+img {
+    vertical-align: middle;
+    border: 0;
+    -ms-interpolation-mode: bicubic; }
+
+button, input, optgroup, select, textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0; }
+
+button {
+    overflow: visible; }
+
+button, select {
+    text-transform: none; }
+
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+    -webkit-appearance: button;
+    cursor: pointer; }
+
+button[disabled], html input[disabled] {
+    cursor: default; }
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    border: 0;
+    padding: 0; }
+
+input {
+    line-height: normal; }
+
+input[type="checkbox"], input[type="radio"] {
+    box-sizing: border-box;
+    padding: 0; }
+
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+    height: auto; }
+
+input[type="search"] {
+    -webkit-appearance: textfield;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none; }
+
+textarea {
+    overflow: auto;
+    resize: vertical; }
+
+input::-moz-placeholder, textarea::-moz-placeholder {
+    color: #ccc; }
+
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {
+    color: #ccc; }
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+    color: #ccc; }
+
+.border_box {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+.fl {
+    float: left; }
+
+.fr {
+    float: right; }
+
+.hide {
+    display: none !important; }
+
+.show {
+    display: block !important; }
+
+.ellipsis {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden; }
+
+.break {
+    word-break: break-all;
+    word-wrap: break-word; }
+
+.clearfix:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both; }
+
+.clearfix {
+    *zoom: 1; }
+
+details {
+    display: none; }
+
+img {
+    max-width: 100%; }
+
+/*home start*/
+.topad img {
+    display: block;
+    width: 100%; }
+
+.topheader {
+    display: block;
+    height: 44px;
+    background: #f8f8f8;
+    border-bottom: solid 1px #ebebeb;
+    line-height: 44px;
+    overflow: hidden; }
+.topheader .logoleft {
+    display: block;
+    float: left;
+    margin-top: 2px;
+    height: 40px;
+    padding: 0 9px;
+    border-right: solid 1px #ebebeb;
+    margin-right: 12px; }
+.topheader .logoleft .logo {
+    display: inline-block;
+    width: 40px;
+    height: 33px;
+    background: url("http://n.sinaimg.cn/games/waphome/top_logo.png") no-repeat;
+    background-size: cover;
+    margin-top: 5px; }
+.topheader span {
+    line-height: 44px;
+    font-size: 1.4rem;
+    color: #1a1a1a; }
+
+.topheader .login-not {
+    background: url("http://n.sinaimg.cn/games/login.png") no-repeat;
+    background-size: 100% 200%;
+    float: right;
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin-top: 11px;
+    margin-right: 12px; }
+.topheader .login-in img {
+    width: 22px;
+    height: 22px;
+    border-radius: 11px;
+    float: right;
+    display: block;
+    width: 22px;
+    height: 22px;
+    margin-top: 11px;
+    margin-right: 12px; }
+
+
+
+
+.tophead-inter{ display: inline-block; width: 30px; height: 43px; background: url("http://n.sinaimg.cn/games/waphome/header_inter.png") no-repeat center center; background-size: auto 100%; vertical-align: middle; }
+.banner .swiper-container {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto; }
+
+.banner .swiper-slide {
+    text-align: center;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center; }
+
+.banner {
+    margin-bottom: 10px; }
+
+.banner .swiper-container a {
+    display: block;
+    width: 100%; }
+
+.banner .swiper-container img {
+    width: 100%;
+    display: block; }
+
+.banner .titlewp {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    bottom: 0;
+    color: #fff;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    font-size: 1.5rem;
+    padding-left: 10px;
+    text-align: left;
+    background: rgba(0, 0, 0, 0.7); }
+
+.banner .titlewp p {
+    width: 75%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; }
+
+.banner .swiper-container-horizontal > .swiper-pagination {
+    width: auto;
+    white-space: nowrap;
+    right: 10px;
+    left: auto;
+    text-align: right;
+    bottom: 15px;
+    height: 4px; }
+
+.banner .swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet {
+    width: 4px;
+    height: 4px;
+    margin: 0 0 0 10px;
+    background: #888888;
+    opacity: 1;
+    display: block;
+    float: left;
+    border-radius: 0;
+    transition: all .3s;
+    -webkit-transition: all .3s; }
+
+.banner .swiper-container-horizontal > .swiper-pagination .swiper-pagination-bullet-active {
+    background: #ff6600;
+    width: 14px; }
+
+.news_scroll_part {
+    background: #fff;
+    border-bottom: solid 1px #ebebeb;
+    margin-bottom: 10px;
+    overflow: hidden; }
+.news_scroll_part .news_scroll {
+    padding: 0 10px;
+    font-size: 1.6rem;
+    height: 40px;
+    line-height: 40px;
+    overflow:hidden;
+    position: relative; }
+.news_scroll_part .news_scroll li {
+    overflow: auto;
+    background: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clear: both; }
+.news_scroll_part .news_scroll li:first-child {
+    z-index: 10; }
+.news_scroll_part .news_scroll li span {
+    display: block;
+    float: left;
+    font-size: 1.2rem;
+    color: #fff;
+    background: #fa4e46;
+    height: 16px;
+    line-height: 16px;
+    padding: 0 3px;
+    margin: 12px 12px 0 10px; }
+.news_scroll_part .news_scroll li a {
+    display: block; }
+
+.menu-list {
+    background: #fff;
+    padding: 7px 0;
+    border-bottom: solid 1px #ebebeb;
+    margin-bottom: 10px; }
+.menu-list .menu-wp .icon-item {
+    float: left;
+    display: block;
+    width: 25%;
+    text-align: center;
+    font-size: 1.2rem;
+    color: #2d2d2d;
+    line-height: 28px;
+    padding: 8px 0; }
+.menu-list .menu-wp .icon-item .iconblock {
+    display: block;
+    width: 100%; }
+.menu-list .menu-wp .icon-item .channel-icon {
+    display: block;
+    width: 45px;
+    height: 45px;
+    margin: 0 auto; }
+.menu-list .menu-wp .icon-item .card {
+    background: url("http://n.sinaimg.cn/games/waphome/menu_icon1.png") no-repeat;
+    background-size: cover; }
+.menu-list .menu-wp .icon-item .video {
+    background: url("http://n.sinaimg.cn/games/waphome/menu_icon2.png") no-repeat;
+    background-size: cover; }
+.menu-list .menu-wp .icon-item .pics {
+    background: url("http://n.sinaimg.cn/games/waphome/menu_icon3.png") no-repeat;
+    background-size: cover; }
+.menu-list .menu-wp .icon-item .egames {
+    background: url("http://n.sinaimg.cn/games/waphome/menu_icon4.png") no-repeat;
+    background-size: cover; }
+.menu-list .menu-wp .icon-item .pagegame {
+    background: url("http://n.sinaimg.cn/games/waphome/menu_icon5.png") no-repeat;
+    background-size: cover; }
+.menu-list .menu-wp .icon-item .list {
+    background: url("http://n.sinaimg.cn/games/waphome/menu_icon6.png") no-repeat;
+    background-size: cover; }
+.menu-list .menu-wp .icon-item .everyday {
+    background: url("http://n.sinaimg.cn/games/waphome/menu_icon7.png") no-repeat;
+    background-size: cover; }
+.menu-list .menu-wp .icon-item .jifen {
+    background: url("http://n.sinaimg.cn/games/waphome/menu_icon8.png") no-repeat;
+    background-size: cover; }
+
+/*.sectionPart {
+background: #fff;
+border-bottom: solid 1px #ebebeb;
+margin: 10px 0; }
+.sectionPart .sectionMain {
+padding: 0 10px; }
+.sectionPart .sectionTitle {
+height: 43px;
+line-height: 43px;
+border-bottom: solid 1px #ebebeb; }
+.sectionPart .sectionTitle h3 {
+  font-size: 1.5rem;
+  color: #474747; }
+  .sectionPart .sectionTitle h3 .border {
+    display: block;
+    float: left;
+    width: 2px;
+    height: 15px;
+    background: #ff6600;
+    vertical-align: middle;
+margin: 14px 7px 0 0; }*/
+
+.seekgame {
+    margin: 10px 0; }
+.seekgame .sectionTitle {
+    margin-bottom: 14px; }
+.seekgame .sel-line1 {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    overflow: auto; }
+.seekgame .sel-item {
+    width: 48%;
+    display: block;
+    -webkit-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1; }
+.seekgame .sel-item:first-child {
+    margin: 0 4% 0 0; }
+.seekgame .query-btn {
+    display: block;
+    width: 100%;
+    height: 38px;
+    margin-bottom: 15px;
+    line-height: 38px;
+    color: #fff;
+    font-size: 1.7rem;
+    text-align: center;
+    background: #ff6600;
+    border-radius: 5px;
+    letter-spacing: 5px; }
+.seekgame .sel-select {
+    display: block;
+    width: 100%;
+    height: 39px;
+    box-sizing: border-box;
+    padding: 0 0 0 13px;
+    margin: 0 0 8px;
+    border: solid 1px #ebebeb;
+    font-size: 1.2rem;
+    line-height: 39px;
+    outline: none;
+    color: #6d6d6d;
+    background: url("http://n.sinaimg.cn/games/waphome/icon_arrow_down.png") no-repeat 95% center #fff;
+    background-size: auto 9px;
+    -webkit-appearance: none;
+    -moz-appearance: none; }
+
+.tags-line {
+    font-size: 0;
+    white-space: nowrap;
+    padding: 15px 10px;
+    background: #f5f5f5;
+    margin: 0 -10px; }
+.tags-line .tags-item {
+    -webkit-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex:1;
+    flex:1;
+    display: block;
+    background: #fff;
+    border: solid 1px #ebebeb;
+    line-height: 35px;
+    font-size: 1.4rem;
+    color: #565656;
+    text-align: center;
+    margin: 0 6px 0 0; }
+.tags-line .tags-item:first-child {
+    margin-left: 0; }
+.tags-line .tags-item:last-child {
+    margin-right: 0; }
+
+.flexbox {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+
+.news-list-wp {
+    /*列表*/ }
+.news-list-wp .news-item {
+    padding: 15px 0;
+    border-bottom: solid 1px #ebebeb; }
+.news-list-wp .news-item a.news-item {
+    width: 100%; }
+.news-list-wp .news-item .n-i-dt {
+    width: 85px;
+    height: 56px;
+    margin-right: 12px;
+    position: relative;
+    background-color: #e4f0f9;
+    background: url("http://mjs.sinaimg.cn/wap/online/home/v7/images/logo.png") no-repeat center center;
+    background-size: 42px auto; }
+.news-list-wp .news-item .n-i-dt img {
+    display: block;
+    width: 100%;
+    height: 100%; }
+.news-list-wp .news-item .n-i-title {
+    font-size: 1.5rem;
+    line-height: 16px;
+    height: 16px;
+    font-weight: normal; }
+.news-list-wp .news-item .n-i-time {
+    font-size: 1.1rem;
+    line-height: 14px;
+    color: #888888; }
+.news-list-wp .news-item .n-i-dd {
+    overflow: hidden;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    position: relative; }
+.news-list-wp .news-item .n-i-dd .n-i-subtitle {
+    font-size: 1.1rem;
+    line-height: 25px;
+    height: 25px;
+    color: #888888;
+    margin-bottom: 2px; }
+.news-list-wp .news-item .n-i-icons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-left: 10px;
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0, white 10%); }
+.news-list-wp .news-item .n-i-icons .n-i-icon-item {
+    float: right;
+    height: 14px;
+    font-size: 1.1rem;
+    color: #888;
+    margin-left: 20px;
+    font-family: Arial;
+    line-height: 14px; }
+.news-list-wp .news-item .n-i-icons .n-i-icon-item .icon {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 5px;
+    vertical-align: -1px; }
+.news-list-wp .news-item .n-i-icons .n-i-icon-item .icon_comment {
+    background: url("http://n.sinaimg.cn/97973pic/cmt.png") no-repeat;
+    background-size: 100% 100%; }
+.news-list-wp .news-item .n-i-icons .n-i-icon-item .icon_pic {
+    background: url("http://n.sinaimg.cn/games/waphome/icon_pic.png") no-repeat;
+    background-size: 100% 100%; }
+.news-list-wp .news-item .threepics {
+    width: 100%;
+    margin: 10px 0;
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: -webkit-box;
+    display: -moz-box; }
+.news-list-wp .news-item .threepics::-webkit-scrollbar-track-piece {
+    background-color: transparent;
+    -webkit-border-radius: 0; }
+.news-list-wp .news-item .threepics::-webkit-scrollbar {
+    width: 0px;
+    height: 0px; }
+.news-list-wp .news-item .threepics::-webkit-scrollbar-thumb {
+    height: 0px;
+    background-color: transparent; }
+.news-list-wp .news-item .n-i-big-item {
+    height: 60px;
+    overflow: hidden;
+    margin: 0 10px 0 0; }
+.news-list-wp .news-item .n-i-big-item:first-child {
+    text-align: left; }
+.news-list-wp .news-item .n-i-big-item:nth-child(2) {
+    text-align: center; }
+.news-list-wp .news-item .n-i-big-item:last-child {
+    text-align: right; }
+.news-list-wp .news-item .n-i-big-item img {
+    height: 100%;
+    vertical-align: middle; }
+.news-list-wp .news-list-more .more {
+    display: block;
+    line-height: 41px;
+    color: #888888;
+    font-size: 1.5rem;
+    text-align: center; }
+.news-list-wp .news-list-more .more .icon-down {
+    display: inline-block;
+    width: 13px;
+    height: 9px;
+    background: url("http://n.sinaimg.cn/games/waphome/icon_arrow_down-gray.png") no-repeat;
+    background-size: auto 100%;
+    vertical-align: middle;
+    margin-left: 7px; }
+
+.plat-logos {
+    padding: 9px 0; }
+
+.plat-logos-line {
+    overflow: auto;
+    font-size: 0;
+    padding: 6px 0; }
+.plat-logos-line .logos-item:nth-child(2) .logos {
+    margin-left: 5%; }
+.plat-logos-line .logos-item:nth-child(3) .logos {
+    margin-left: 10%; }
+
+.logos-item {
+    /*float: left;*/
+    width: 33.33%;
+    -webkit-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -ms-flex:1;
+    flex:1;
+}
+.logos-item .logos {
+    display: block;
+    /*width: 91px; height: 46px;*/
+    width: 90%;
+    overflow: hidden;
+    border: solid 1px #ebebeb;
+    position: relative;
+    box-sizing: border-box; }
+.logos-item .logos img {
+    display: block;
+    width: 100%; }
+
+.vip {
+    display: block;
+    width: 27px;
+    height: 27px;
+    position: absolute;
+    z-index: 1;
+    left: 0px;
+    top: 0px;
+    background: url("http://n.sinaimg.cn/games/waphome/vip.png") no-repeat left top;
+    background-size: cover; }
+
+.mobileGames .gamelogos {
+    overflow: auto;
+    padding: 15px 0 2px; }
+.mobileGames .gamelogos-item {
+    width: 25%;
+    float: left;
+    text-align: center; }
+.mobileGames .gamelogos-item .gamelogos-logo {
+    width: 66px;
+    display: block;
+    margin: 0 auto;
+    position: relative; }
+.mobileGames .gamelogos-item .gamelogos-logo img {
+    display: block;
+    width: 100%;
+    height: 66px;
+    border-radius: 10px; }
+.mobileGames .gamelogos-item .gamelogos-logo p {
+    font-size: 1.4rem;
+    color: #474747;
+    margin: 8px 0 13px; }
+
+.bigpic {
+    margin-top: 10px; }
+.bigpic img {
+    display: block;
+    width: 100%; }
+
+.j_slide_content {
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    position: relative;
+    margin: 10px 0; }
+.j_slide_content .slide_box {
+    -webkit-box-pack: center;
+    display: -webkit-box;
+    position: relative; }
+.j_slide_content .slide_box .j_slide_card {
+    width: auto;
+    margin: 0 10px 0 0;
+    height: 60px; }
+.j_slide_content .slide_box .j_slide_card img {
+    height: 100%; }
+
+.centerad img {width:100%;display:block;}
+
+.about-read-wp {
+    position: relative;
+    margin: 10px 0;
+    overflow: hidden; }
+.about-read-wp .j_slide_box {
+    -moz-box-pack: center;
+    -webkit-box-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    transition-duration: .3s;
+    -webkit-transition-duration: .3s; }
+.about-read-wp .j_slide_box .about-item {
+    height: 84px;
+    width: 90%;
+    display: block;
+    position: relative;
+    border: solid 1px #ebebeb;
+    background: #f9f9f9;
+    box-sizing: border-box;
+    padding: 6px 11px;
+    margin: 0 10px 0 0; }
+.about-read-wp .j_slide_box .about-item .label {
+    display: block;
+    font-size: 1.2rem;
+    height: 20px;
+    line-height: 20px;
+    padding: 0 8px;
+    color: #fff;
+    background: #ff6600;
+    position: absolute;
+    z-index: 2;
+    left: -1px;
+    top: 6px; }
+.about-read-wp .j_slide_box .about-item .time {
+    font-size: 1.2rem;
+    line-height: 20px;
+    color: #868686;
+    text-align: right; }
+.about-read-wp .j_slide_box .about-item .about-title {
+    font-size: 1.5rem;
+    color: #474747;
+    margin: 6px 0 3px; }
+.about-read-wp .j_slide_box .about-item .about-subtitle {
+    color: #696969;
+    font-size: 1.2rem; }
+
+/*.tool_box ul li {
+position: relative;
+padding: 15px 0;
+border-bottom: 1px solid #ebebeb;
+overflow: hidden; }
+.tool_box ul li:last-child {
+border-bottom: none; }
+.tool_box ul li img {
+width: 46px;
+height: 46px;
+border-radius: 10px;
+float: left;
+margin-right: 20px; }
+.tool_box ul li h6 {
+font-size: 1.6rem;
+line-height: 23px;
+font-weight: normal; }
+.tool_box ul li p {
+font-size: 1.4rem;
+line-height: 15px;
+color: #888888;
+margin-top: 6px; }
+.tool_box ul li p a {
+  color: #888; }
+.tool_box ul li a.tool_btn {
+display: block;
+width: 38px;
+height: 38px;
+background-color: #fff;
+border: 1px solid #aeddfe;
+border-radius: 38px;
+background: url("http://n.sinaimg.cn/97973pic/tool.png") no-repeat;
+background-size: 100% 200%;
+text-indent: -999em;
+position: absolute;
+right: 0;
+top: 19px; }
+.tool_box ul li a.tool_btn:active {
+background-color: #35aafc;
+border-color: #35aafc;
+background-position: 0 -38px; }
+.tool_box ul li a.tool_btn_no {
+display: block;
+width: 38px;
+height: 38px;
+background-color: #fff;
+border: 1px solid #d6d6d6;
+border-radius: 38px;
+background: url(http://n.sinaimg.cn/games/waphome/tool_no.png) no-repeat;
+background-size: 100% 100%;
+text-indent: -999em;
+position: absolute;
+right: 0;
+top: 19px;
+cursor: default; }*/
+
+
+
+.totop {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 10;
+    bottom: 50px;
+    right: 10px;
+    opacity: 0;
+    background: rgba(0, 0, 0, 0.6) url(http://n.sinaimg.cn/games/waphome/totop.png) no-repeat center center;
+    background-size: 20px 13px;
+    transition: all .5s; }
+
+.totop.active {
+    opacity: 1; }
+
+@media (min-width: 360px) {
+    .topheader span {
+        font-size: 1.6rem; }
+
+    .topnav a {
+        font-size: 1.9rem; }
+
+    .menu-list .menu-wp .icon-item {
+        font-size: 1.4rem; }
+
+    .sectionPart .sectionTitle h3 {
+        font-size: 1.7rem; }
+
+    .seekgame {
+        margin: 10px 0; }
+    .seekgame .query-btn {
+        font-size: 1.9rem; }
+
+    .tags-line .tags-item {
+        font-size: 1.5rem; }
+
+    .news-list-wp {
+        /*列表*/ }
+    .news-list-wp .news-item .n-i-dt {
+        width: 100px;
+        height: 66px; }
+    .news-list-wp .news-item .n-i-title {
+        font-size: 1.7rem;
+        line-height: 18px;
+        height: 18px; }
+    .news-list-wp .news-item .n-i-time {
+        font-size: 1.3rem;
+        line-height: 15px; }
+    .news-list-wp .news-item .n-i-dd .n-i-subtitle {
+        font-size: 1.3rem;
+        line-height: 30px;
+        height: 30px; }
+    .news-list-wp .news-item .n-i-icons .n-i-icon-item {
+        font-size: 1.2rem; }
+    .news-list-wp .news-item .n-i-big-item {
+        height: 70px; }
+    .news-list-wp .news-list-more .more {
+        font-size: 1.6rem; }
+
+    .mobileGames .gamelogos-item .gamelogos-logo {
+        width: 76px; }
+    .mobileGames .gamelogos-item .gamelogos-logo img {
+        height: 76px; }
+    .mobileGames .gamelogos-item .gamelogos-logo p {
+        font-size: 1.5rem; }
+
+    .about-read-wp .j_slide_box .about-item {
+        height: 90px; }
+    .about-read-wp .j_slide_box .about-item .label {
+        font-size: 1.2rem; }
+    .about-read-wp .j_slide_box .about-item .time {
+        font-size: 1.2rem; }
+    .about-read-wp .j_slide_box .about-item .about-title {
+        font-size: 1.6rem; }
+    .about-read-wp .j_slide_box .about-item .about-subtitle {
+        font-size: 1.3rem; }
+
+    .tool_box ul li img {
+        width: 50px;
+        height: 50px; }
+    .tool_box ul li h6 {
+        font-size: 1.7rem;
+        line-height: 23px; }
+    .tool_box ul li p {
+        font-size: 1.5rem;
+        line-height: 17px;
+        margin-top: 10px; }
+
+    .vip {
+        width: 30px;
+        height: 30px; } }
+
+/*# sourceMappingURL=main.css.map */
+	

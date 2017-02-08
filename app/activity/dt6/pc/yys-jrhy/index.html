@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>装X炫图</title>
+<link rel="stylesheet" href="../../../css/reset.css" />
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../../../css/swiper.min.css">
+</head>
+<body>
+<div class="loading">
+    <div class="loading1"></div>
+</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="section" id="section1">
+                <canvas id="canvas1"></canvas>
+                <input id="desc" type="text"  placeholder="这里输入你的昵称"/>
+                <a class="bt1"  id="moveSectionDown" ><img src="../imges/ac1_btn.png" alt=""/></a>
+                <div class="mengban"></div>
+                <div class="tk"></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="section" id="section2">
+                <div class="mengban"></div>
+                <div class="tk"></div>
+                <img class="use" />
+                <div class="btnGroup" style="margin: 0 auto;text-align: center">
+                    <a class="btn1"><img src="../imges/btn_yellow.png" alt=""/></a>
+                    <a class="btn2"><img src="../imges/btn_green.png" alt=""/></a>
+                </div>
+                <p>鼠标右键保存图片</p>
+                <div class="bdsharebuttonbox" data-tag="share_1">
+                    <a class="bds_tsina" data-cmd="tsina"></a>
+                    <a class="bds_qzone" data-cmd="qzone"></a>
+                    <a class="bds_weixin" data-cmd="weixin"></a>
+                    <a class="bds_sqq" data-cmd="sqq"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../../../../lib/jquery/js/jquery.min.js"></script>
+<script src="../../../../../lib/oss/aliyun-sdk.min.js"></script>
+<script src="../../../../../lib/oss/oss-js-upload.js"></script>
+<script src="../../../../../lib/common/common.js"></script>
+<script src="../../../../../lib/md5/spark-md5.js"></script>
+<script src="../../../../../lib/sitestat/baidu.js"></script>
+<script src="../../../../../lib/confirm/confirm.js"></script>
+<script src="../../../../../lib/device/device.js"></script>
+<script src="../../../../../lib/cryptojs/signature.js"></script>
+<script src="../../../../api/api.js?d=1280977331177"></script>
+<script src="../../../../report/report.js?d=1280977331177"></script>
+<script src="../../../js/swiper.min.js"></script>
+<script>
+    var time = null;
+    var pic = 'yys-jrhy';
+    time = setTimeout(function () {
+        $(".loading").hide();
+    }, 3000);
+    var swiper = new Swiper('.swiper-container', {
+        onlyExternal : true,
+        keyboardControl : false,
+    });
+    $('.section').css({"background":'url(../picture/'+pic+'_bg.jpg)no-repeat',"background-size":"cover"});
+    var json = {};
+    var title;
+    var content;
+    var imgupload = true;
+    var shareType;
+    var fileUrl;
+    var imageUrl;
+    var url ;
+    function getCanvas(id){
+        return document.getElementById(id);
+    }
+    var ctx=document.getElementById('canvas1');
+    var mainCtx = ctx.getContext('2d');
+    var activity_text;
+    var activity_top;
+    var activity_left;
+    mainCtx.clearRect(0,0,2000,2000);
+    var starSelectImg = '../picture/'+pic+'_use.jpg';
+    var starImg = new Image();
+    starImg.src=starSelectImg;
+    starImg.onload=function(){
+        mainCtx.drawImage(starImg,0,0);
+        mainCtx.save();
+    };
+    title = "阴阳师金鸾鹤羽";
+    content = "经典皮肤已到手";
+    ctx.width=1022;
+    ctx.height=574;
+    activity_left = 793;
+    activity_top = 441;
+    mainCtx.font = "18px KaiTi";
+    mainCtx.fillStyle = "#d6c4c0";
+    mainCtx.textAlign="left";
+    activity1_text = '';
+    $('.bt1').on('click',function(e) {
+        var text = $('#desc').val();
+        if(!text){
+            sho(3);
+            return false;
+        }else if(text.length > 10){
+            sho(2);
+            return false;
+        }else{
+            sho(4);
+            setTimeout(function () {
+                swiper.slideNext();
+            }, 1500);
+        }
+        mainCtx.fillText(text+activity1_text,activity_left,activity_top);
+        mainCtx.save();
+        var canvasData = getCanvas('canvas1').toDataURL('image/jpg');
+        $(".use").attr("src",canvasData);
+        $('.btn1').on('click',function(e) {
+            document.location.href = '/app/activity/dt6/pc/index.html';
+        });
+        $('.btn2').click(function(){
+            var ua = navigator.userAgent.toLowerCase();
+            if (/iphone|ipad|ipod/.test(ua)) {
+                window.open('http://itunes.apple.com/us/app/id1068393450');
+            } else if (/android/.test(ua)) {
+                window.open('http://download.youmengchuangxiang.com/android/specified/xuanyao.3.19.201701101446.apk')
+            }else{
+                window.open('http://www.youmengchuangxiang.com/product.html')
+            }
+        })
+        var encodeName = encodeURI(encodeURI(text));
+        window._bd_share_config = {
+            common : {
+                bdText : title,
+                bdDesc : content,
+                bdUrl : 'http://www.youmengchuangxiang.com/app/activity/dt6/share.html?&text=' + encodeName + '&name='+pic+'',
+                bdPic : 'http://www.youmengchuangxiang.com/app/activity/dt6/picture/'+pic+'_use.jpg'
+            },
+            share : [{
+                "bdSize" : 32
+            }],
+        }
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
+    })
+    function sho(num){
+        if(num==1){
+            $(".mengban").show();
+            $(".tk").show();
+            $(".tk").html('<img src="../imges/text'+num+'.png" />');
+        }else{
+            $(".mengban").show();
+            $(".tk").show();
+            $(".tk").html('<img src="../imges/text'+num+'.png" />');
+            setTimeout(function () {
+                $(".mengban").hide();
+                $(".tk").hide();
+            }, 2000);
+        }
+    }
+</script>
+</body>
+</html>

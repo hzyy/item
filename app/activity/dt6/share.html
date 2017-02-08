@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>炫图神器</title>
+    <link rel="stylesheet" href="../../../lib/confirm/confirm.css" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <script src="../../../lib/sitestat/baidu.js"></script>
+	<script src="../../../lib/mobile/mobile.js"></script>
+    <script src="../../../lib/jquery/js/jquery.min.js"></script>
+    <script src="../../../lib/common/common.js"></script>
+    <script src="../../../lib/confirm/confirm.js"></script>
+    <script src="../../../lib/device/device.js"></script>
+    <script src="../../report/report.js?d=1280977331177"></script>
+    <script src="../../api/api.js?d=1280977331177"></script>
+    <style type="text/css">
+        @media screen and (min-width: 1367px) {
+            html,body{height:100%;max-width: 640px;margin: 0 auto;background-color: #282828;}
+            p{
+                text-align: center;
+                font-family: "Microsoft YaHei", Arial, "Helvetica";
+                font-size: 28px;
+                color: white;
+            }
+        }
+        @media screen and (min-width: 769px) and (max-width: 1366px) {
+            html,body{height:100%;max-width: 400px;margin: 0 auto;background-color: #282828;}
+            p{
+                text-align: center;
+                font-family: "Microsoft YaHei", Arial, "Helvetica";
+                font-size: 18px;
+                color: white;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            html,body{height:100%;max-width: 768px;margin: 0 auto;background-color: #282828;}
+            p{
+                text-align: center;
+                font-family: "Microsoft YaHei", Arial, "Helvetica";
+                font-size: 18px;
+                color: white;
+            }
+        }
+        #wrap {width: 100%; height: 100%; display: -webkit-box;  -webkit-box-orient: vertical;  overflow: hidden;}
+        #wrap .use{margin: 10% auto;width: 80%; border-radius: 10px;border: 2px solid white;display: block}
+        button{
+            margin: 10% auto;
+            width: 80%;
+            display: block;
+            background: transparent;
+        }
+        button img{width: 100%;}
+        #canvas1{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <img class="use"/>
+        <canvas id="canvas1" ></canvas>
+        <p>鼠标右键可保存图片</p>
+        <button id="btn" ><img src="imges/btn_green2.png" alt=""/></button>
+    </div>
+<script>
+        var sUserAgent = navigator.userAgent.toLowerCase();
+        var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+        var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+        var bIsAndroid = sUserAgent.match(/android/i) == "android";
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null) return decodeURIComponent(r[2]);
+            return null;
+        }
+        var name = getQueryString('name');
+        var text = decodeURI(decodeURI(getQueryString('text')));
+        $('#wrap').css({"background":'url(pc/picture/'+name+'_bg.jpg)no-repeat',"background-size":"cover"})
+        function getCanvas(id){
+            return document.getElementById(id);
+        }
+        var ctx=document.getElementById('canvas1');
+        var mainCtx = ctx.getContext('2d');
+        var activity_text;
+        var activity_top;
+        var activity_left;
+        if (name == 'dnf') {
+            title = "最强法驱就是我";
+            content = "不知我是不是配得上这个称号";
+            ctx.width=800;
+            ctx.height=486;
+            activity_left = 182;
+            activity_left2 = 396;
+            activity_top = 193;
+            activity_top2 = 303;
+            mainCtx.font = "12px";
+            mainCtx.fillStyle = "#fff";
+            mainCtx.textAlign="center";
+            activity1_text = '';
+        }else if(name == 'tldkcj'){
+            title = "成就第一！";
+            content = "贪婪洞窟成就第一位";
+            ctx.width=750;
+            ctx.height=734;
+            activity_left = 227;
+            activity_top = 396;
+            mainCtx.font = "bold 28px 微软雅黑";
+            mainCtx.fillStyle = "#392a00";
+            mainCtx.textAlign="left";
+            activity1_text = '';
+        }else if(name == "zfbzd"){
+            title = "支付宝2016年账单";
+            content = "爷就是有钱";
+            ctx.width=639;
+            ctx.height=596;
+            activity_left = 310;
+            activity_top = 538;
+            mainCtx.font = "42px KaiTi";
+            mainCtx.fillStyle = "#fff";
+            mainCtx.textAlign="left";
+            activity1_text = '.77元';
+        }else if(name == "yys-jrhy"){
+            title = "阴阳师金鸾鹤羽";
+            content = "经典皮肤已到手";
+            ctx.width=1022;
+            ctx.height=574;
+            activity_left = 793;
+            activity_top = 441;
+            mainCtx.font = "18px KaiTi";
+            mainCtx.fillStyle = "#d6c4c0";
+            mainCtx.textAlign="left";
+            activity1_text = '';
+        }
+        mainCtx.clearRect(0,0,2000,2000);
+        var starSelectImg = 'pc/picture/'+name+'_use.jpg';
+        var starImg = new Image();
+        starImg.src=starSelectImg;
+        starImg.onload=function(){
+            mainCtx.drawImage(starImg,0,0);
+            if(name == 'dnf'){
+                mainCtx.fillText(text+activity1_text,activity_left,activity_top);
+                mainCtx.fillStyle = "#fbf4d7";
+                mainCtx.fillText(text+activity1_text,activity_left2,activity_top2);
+            }else{
+                mainCtx.fillText(text+activity1_text,activity_left,activity_top);
+            }
+            mainCtx.save();
+            var canvasData = getCanvas('canvas1').toDataURL('image/jpg');
+            $(".use").attr("src",canvasData);
+        };
+		var scheme = {
+            'ios': encodeURIComponent('gamecircle://openActivity'),
+            'android': encodeURIComponent('gamecircle://ymcx.gamecircle?act=hotActive')
+		};
+        // 立即打开的按钮
+        document.getElementById('btn').addEventListener('click', function() {
+            if (bIsIphoneOs || bIsIpad) {
+                window.location.href = 'http://www.youmengchuangxiang.com/app/install/index.html?scheme=' + scheme['ios'];
+            } else if (bIsAndroid) {
+                window.location.href = 'http://www.youmengchuangxiang.com/app/install/index.html?scheme=' + scheme['android'];
+            } else {
+                window.location.href = 'http://www.youmengchuangxiang.com/app/install/index.html';
+            }
+		}, false);
+    </script>
+</body>
+</html>

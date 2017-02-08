@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../../../../lib/mobile/mobile.js"></script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=200, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>《我是游戏玩家，跟我嘚瑟起来!!!》</title>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<style type="text/css">
+		#wrap{width: 100%;overflow: hidden;position:relative;}
+		#wrap img{display: block;width: 100%;}
+		#btn1 {position: absolute;top: 17.7%;width: 44.2%;left: 29.2%;height: 3.7%;background: transparent;margin-left: -1%;border-radius: 8px;}
+	</style>
+	<script src="../../../../lib/sitestat/baidu.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<img id="bg_img" src="yxwj.jpg"/>
+		<a href="http://www.youmengchuangxiang.com/product.html"><button id="btn1" class="btn"></button></a>
+	</div>
+	<script>
+//		<!-- 图片缓存清理 -->
+		var ele = document.getElementById("bg_img");
+		var timestamp = Date.parse(new Date());
+		ele.src = ele.src+"?m="+timestamp;
+	</script>
+</body>
+</html>

@@ -1,0 +1,198 @@
+html, body {
+    position: relative;
+    height: 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input[type="number"]{-moz-appearance:textfield;}
+body {
+    background: #eee;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color:#000;
+    margin: 0;
+    padding: 0;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+}
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background-color: #282828;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.loading{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #030303;
+    z-index: 999;
+}
+.loading1,.loading2{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 200px;
+    height: 200px;
+    background: url("../imges/loading.gif") no-repeat center center;
+    background-size: cover;
+}
+@media screen and (min-width: 1368px) {
+    #section1,#section2{
+        max-width: 640px;
+        margin:0 auto;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    #section2 p{
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        font-family: "Microsoft YaHei", Arial, "Helvetica";
+        font-size: 28px;
+        color: white;
+    }
+}
+@media screen and (min-width: 769px) and (max-width: 1366px) {
+    #section1,#section2{
+        max-width: 400px;
+        margin:0 auto;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    #section2 p{
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        font-family: "Microsoft YaHei", Arial, "Helvetica";
+        font-size: 24px;
+        color: white;
+    }
+}
+@media screen and (max-width: 768px) {
+    #section1,#section2{
+        max-width: 768px;
+        margin:0 auto;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+    #section2 p{
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        font-family: "Microsoft YaHei", Arial, "Helvetica";
+        font-size: 18px;
+        color: white;
+    }
+}
+
+#section1 canvas{
+    margin:15% 0 0 0;
+    width: 80%;
+    border-radius: 10px;
+    border: 2px solid white
+}
+#section1 input{
+    width: 71%;
+    font-size: 16px;
+    padding: 3% 4%;
+    border-radius: 10px;
+    border: 2px solid #1FB178;
+    margin: 5% 0 0 0 ;
+}
+#section1 a{
+    margin: 8% auto ;
+    width: 80%;
+    height: 9.2%;
+    display: block
+}
+#section1 .mengban,#section2 .mengban{
+    z-index: 998;
+    display: none;
+    width: 100%;
+    position: absolute;
+    z-index: 998;
+    right: 0;
+    left: 0;
+    height: 100%;
+}
+#section1 a img{width: 100%}
+#section1 .tk ,#section2 .tk{
+    display: none;
+    position: absolute;
+    width: 39%;
+    height: 24%;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+#section1 .tk img,#section2 .tk img{width: 100%}
+
+#section2 .use{
+    margin: 15% auto;
+    width: 80%; border-radius: 10px;border: 2px solid white;display: block}
+#section2 .btn1{
+    margin: 0 5% 10% 1% ;
+    width: 39%;
+    display: inline-block;
+}
+#section2 .btn2{
+    margin: 0 1% 10% 5% ;
+    width: 39%;
+    display: inline-block;
+}
+
+#section2 a img{width: 100%}
+
+#section2 button{
+    position: absolute;
+    top: 73%;
+    width: 12%;
+    background: transparent;
+}
+#section2 .btn3{left: 25.5%}
+#section2 .btn4{left: 44.5%}
+#section2 .btn5{left: 63.5%}
+#section2 .btn6{left: 82%}
+#section2 .btn7{left: 6%}
+#section2 button img{width: 100%}
+
+
+/*����*/
+.bdsharebuttonbox{width: 100%;padding: 10% 0%;}
+.bdsharebuttonbox a{margin: 0 5%!important;width: 15%!important;height:100px!important;padding-left: 0!important}
+.bds_tsina{background: url("../imges/weibo.png")no-repeat!important;background-size: contain!important}
+.bds_qzone{background: url("../imges/kj.png")no-repeat!important;background-size: contain!important}
+.bds_weixin{background: url("../imges/weixin.png")no-repeat!important;background-size: contain!important}
+.bds_sqq{background: url("../imges/qq.png")no-repeat!important;background-size: contain!important}

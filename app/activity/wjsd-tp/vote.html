@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>玩家盛典投票首页</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link href="css/resert.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/wapgame.css">
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <script src='js/zepto.min.js'></script>
+    <script src="../../../lib/jquery/js/jquery.min.js"></script>
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css" >
+    <script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        // 字号初始化
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 +"px";
+    </script>
+    <style>
+        .voteTargets li .voteTarget-logo{background:#111010;}
+        .voteTargets li .voteTarget-logo img{display:block;width:100%;height:auto;position:absolute;left:0;top:50%;transform:translate3d(0,-50%,0);-webkit-transform:translate3d(0,-50%,0);}
+        .h-p-1 a{color:#fff;}
+        .h-p-2 a{color:#b9b9b9}
+        .h-p-3 a{color:#fec749;}
+    </style>
+</head>
+<body>
+<div class="cry" style="width:100%;height:100%;position:fixed;top:0;left:0;z-index: 0;"></div>
+
+<!--loadding-->
+<div class="loading page1 preload-L" style="display:none;">
+    <div class="circle preload-L">
+        <div class="circle-light am-loading preload-L"></div>
+        <div class="loading-f preload-L">
+            <p><span></span>%</p>
+        </div>
+    </div>
+</div>
+<!--第二页-->
+<div class="page2">
+    <!--首屏-->
+    <div class="first ">
+        <div class="fibg">
+            <!--首页的首屏背景图片 begin-->
+            <img class="preload-M INDEX" src="images/bg-1-a.jpg">
+            <!--首页的首屏背景图片 end-->
+
+            <!--单游戏页的首屏背景图片 begin-->
+            <!--注意！！！根据游戏，替换此处图片，尺寸 750 * 1334 -->
+            <img class="preload-M MODULE" src="images/banner-bg.jpg">
+            <!--单游戏页的首屏背景图片 end-->
+        </div>
+
+        <div class="fibg layer" data-depth="0.3">
+            <!--首页的浮动元素 begin-->
+            <img class="preload-M INDEX" src="images/bg-pra-1.png">
+            <!--首页的浮动元素 end-->
+
+            <!--单游戏页的浮动元素 begin-->
+            <img class="preload-M MODULE" src="images/banner-fl.png">
+            <!--单游戏页的浮动元素 end-->
+        </div>
+
+
+        <div class="bg1-star layer" data-depth="0.15">
+            <div class="bg1-star3 star1 star3 preload-M"></div>
+        </div>
+        <div class="first-con layer" data-depth="0">
+            <!--首页的首屏相关内容 begin-->
+            <!--首页首屏的火热报名链接-->
+            <a  class="INDEX hot lyy-1">
+                <img class="preload-M" src="images/vote-h5.png">
+            </a>
+            <div class="INDEX t-tri tri-r1 preload-M"></div>
+            <div class="INDEX t-hdjs">
+                <p class="nav-en">ABOUT</p>
+            </div>
+            <!--首页（主招募页）限3行文字，单游戏页限两行-->
+            <p class="INDEX jswz lyy-2">新浪游戏、炫耀党联合主办玩家盛典，票选各大游戏人气王，有奖投票赢终极大奖。</p>
+            <!--首页的首屏相关内容 end-->
+
+            <!--单游戏页的首屏相关内容 begin-->
+            <!--游戏logo链接-->
+            <a href="javascript:void(0)" class="single-a-logoA MODULE"></a>
+            <!--玩家盛典logo链接-->
+            <a href="javascript:void(0)" class="single-a-logoB MODULE"></a>
+            <!--火热报名logo链接-->
+            <a class="single-a-logoC MODULE  lyy-1">
+                <img class="preload-M" src="images/vote-h5.png">
+            </a>
+            <!--首页（主招募页）限3行文字，单游戏页限两行-->
+            <p class="MODULE jswz lyy-2">新浪游戏、炫耀党联合主办玩家盛典，票选各大游戏人气王，有奖投票赢终极大奖。</p>
+            <!--单游戏页的首屏相关内容 end-->
+
+            <div class="t-darrow lyy-3 preload-M"></div>
+        </div>
+    </div>
+
+    <!--投票-->
+    <div class="votePart preload-M">
+        <div class="votePart-con">
+            <p class="nav-en">PLAYERS VOTE</p>
+            <p class="vote-js" style="margin: 0.5rem 0"><a href="javascript:showDialog('dialog-2')">参赛游戏</a></p>
+            <!--厂商logo-->
+            <ul class="cs-logos">
+                <!--<li><a href="javascript:void(0)"><img src="http://n.sinaimg.cn/games/20161214/Jkwk-fxypipt1330036.jpg"></a></li>-->
+            </ul>
+            <script>
+                //确定厂商logo宽高
+                $(".cs-logos li").css({width:Math.floor((document.documentElement.clientWidth - 10*2 - 5*4)/5),height:Math.floor((76/134)*Math.floor((document.documentElement.clientWidth - 10*2 - 5*4)/5))});
+//                $(".cs-logos li").css({width:Math.floor((document.documentElement.clientWidth - 10*2 - 5*4)/4),height:Math.floor((76/134)*Math.floor((document.documentElement.clientWidth - 10*2 - 5*4)/4))});
+            </script>
+            <!--被投票的人们-->
+            <ul class="voteTargets" style="margin-top: 0.5rem">
+                <div class="voteTargets-jw3">
+                    <!--<p>参与剑网3投票的用户</p><p>我们会每天随机抽取一名</p><p>送出江湖画扇（180天）1把！</p>-->
+                </div>
+                <p class="vote-js" style="text-align: left;margin-left: 0.2rem;line-height: 0.8rem;font-size: 14px;padding-top: 0.5rem"><a href="javascript:showDialog('dialog-2')">玩家展示</a></p>
+                <div class="voteTargets-content"></div>
+            </ul>
+            <div class="choujiang-b">
+                <div class="choujiang-b-i"><img src="images/choujiang-b-i.png"></div>
+                <div class="choujiang-b-d">
+                    <p class="choujiang-b-d-title">票数最高玩家：人气王奖</p>
+                    <p>对应游戏极品大奖（<A HREF="https://games.sina.com.cn/ol/n/dlwyxw/2017-01-09/fxzkfuh6135494.shtml" target="_blank" style="color:#feda7b;">详细</A>）；</p>
+                    <p>微博游戏人气王加V认证；</p>
+                    <p>受邀参加线下玩家盛典。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--抽奖-->
+    <div class="choujiang preload-M">
+        <div class="choujiang-con">
+            <p class="nav-en">PRIZES</p>
+            <!--<p class="jsjhj"><a href="javascript:showDialog('dialog-1')">抽奖规则</a></p>-->
+            <p class="MODULE jswz lyy-2">
+                <span style="color: #F1C61E">抽奖规则：</span><br/>
+                 通过炫耀党APP进行投票<br/>
+                （1）登录炫耀党APP<br/>
+                （2）参与晋级赛活动给心仪的选手投票<br/>
+                （3）分享玩家盛典活动<br/>
+                ※每完成以上<span style="color: #F1C61E">任意</span>步骤即可获得<span style="color: #F1C61E">一次</span>转盘机会，既每天总共可以获得<span style="color: #F1C61E">三次</span>。
+            </p>
+            <p class="MODULE jswz lyy-2">
+                <span style="color: #F1C61E">活动奖项：</span><br/>
+                此次活动奖品由炫耀党、新浪游戏独家提供，动动手指，<span style="color: #F1C61E">iPHONE7</span>、<span style="color: #F1C61E">小米5s</span>、<span style="color: #F1C61E">平衡车</span>、<br/> <span style="color: #F1C61E">雷蛇鼠标</span>及<span style="color: #F1C61E">海量Q币卡</span>轻松得！
+            </p>
+            <!--抽奖转盘-->
+            <div class="choujiang-zp">
+                <img src="images/zp.png" alt=""/>
+                <button class="rotaryArrow" ><img src="images/zhen.png"/></button>
+                <button id="rotaryArrow" style="border: none"><img class="choujiang-btn"  src="images/price.png" alt=""/></button>
+            </div>
+            <p class="choujiang-down">剩余抽奖次数<span></span></p>
+            <div class="choujiang-prise">
+                <img src="images/bg-prise.png" alt=""/>
+                <div class="list_lh list_lh_vote">
+                    <ul class="uesrPrize"></ul>
+                </div>
+            </div>
+            <!--抽奖转盘 end -->
+        </div>
+    </div>
+    <div class="foot preload-M"></div>
+</div>
+<!--按钮-->
+<div class="sus fadeIn">
+    <div class="share-wei share-qq_zone" name="qq_zone"><img class="preload-M" src="images/kj.png"></div>
+    <div class="share-wei share-weixin_pyq" name="weixin_pyq"><img class="preload-M" src="images/pyq.png"></div>
+    <div class="share-wei share-weiBo" name="weibo"><img class="preload-M" src="images/weibo.png"></div>
+    <div class="uptop"><img class="preload-M" src="images/up.png"></div>
+</div>
+<!--弹窗-->
+
+<div class="dialog dialog-4" style="display:none;">
+    <div class="dialog-inner">
+        <div class="dialog-con">
+            <p class="dialog-con-t tcenter">
+            </p>
+        </div>
+        <a href="javascript:hideDialog()" class="iknow">我知道了</a>
+    </div>
+</div>
+
+<div class="dialog dialog-5" style="display:none;">
+    <div class="dialog-inner">
+        <div class="dialog-con">
+            <p class="dialog-con-t tcenter">投票成功 </p>
+        </div>
+        <a href="javascript:hideDialog()" class="iknow">我知道了</a>
+    </div>
+</div>
+
+<script>
+    $(".uptop").click(function(){
+        $("html,body").animate({scrollTop:0},500);
+    })
+    $(".share-weiXin").click(function(){
+        $("body").append("<div class='shadow' onclick='removeShadow()'></div>");
+        document.addEventListener("touchmove",notouchmove,false);
+    });
+    function notouchmove(){
+        var e = event || window.event;
+        e.preventDefault();
+    }
+    function removeShadow(){
+        $(".shadow").remove();
+        document.removeEventListener("touchmove",notouchmove,false);
+    }
+
+    //显示弹窗
+    function showDialog(className){
+        $(".dialog").hide();
+        var jqo = $("."+className),
+            jqo_inner = jqo.find(".dialog-inner");
+        jqo.show();
+//        jqo_inner.css("margin-top",-0.5*jqo_inner.height())
+        document.addEventListener("touchmove",notouchmove,false);
+    }
+    //隐藏弹窗
+    function hideDialog(){
+        $(".dialog").hide();
+        document.removeEventListener("touchmove",notouchmove,false);
+    }
+</script>
+</body>
+<script src="../../../lib/confirm/confirm.js"></script>
+<script src="../../../lib/common/common.js"></script>
+<script src="../../../lib/cryptojs/signature.js"></script>
+<script src="../../api/api.js?d=1475231766812"></script>
+<script src="../../report/report.js?d=1280977331177"></script>
+<script src="../../../lib/device/device.js?d=1475231766876"></script>
+<script src="js/scroll.js"></script>
+<script src="js/wjsdwap.js?d=1475231766111"></script>
+<script src="js/jquery.rotate.min.js"></script>
+<script src="js/choujiang.js"></script>
+<html>

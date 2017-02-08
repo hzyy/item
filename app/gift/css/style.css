@@ -1,0 +1,19 @@
+body {
+	font-size: 15px;
+	color: #555555;
+	background-color: #f4f4f4;
+}
+
+div p {
+	text-indent: 2em;
+	margin: 5px 0 5px 0;
+}
+
+hr {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+.ml5 {
+	margin-left: 5px;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../../../../lib/mobile/mobile.js"></script>
+	<script type="text/javascript">
+		if(!MobileJS.isMobile()){
+			window.location.href="http://www.youmengchuangxiang.com/app/activity/xyd/pc/index.html";
+		}
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=200, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>《在炫耀党 无处不团》</title>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<style type="text/css">
+		html,body{
+			max-width: 640px;
+			margin: 0 auto;
+		}
+		#wrap{
+		  width: 100%;
+		  
+		  overflow: hidden;
+		  position:relative;
+		}
+		#wrap img{
+		  display: block;
+		  width: 100%;
+		}
+		#btn1 {
+			position: absolute;
+			top: 10.8%;
+			width: 45.2%;
+			left: 28.5%;
+			height: 2.9%;
+			background: transparent;
+			margin-left: -1%;
+			border-radius: 4px;
+		}
+		/*#btn2 {*/
+		/*position: absolute;*/
+		/*top: 37.1%;*/
+		/*width: 43.2%;*/
+		/*left: 9.5%;*/
+		/*height: 5.9%;*/
+		/*background: transparent;*/
+		/*margin-left: -1%;*/
+		/*border-radius: 23px;*/
+		/*}*/
+	</style>
+	<script src="../../../../lib/sitestat/baidu.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<img src="h5.png"/>
+		<button id="btn1" class="btn"></button>
+	</div>
+	<script>
+		var	btn1=document.getElementById("btn1");
+//				btn2=document.getElementById("btn2");
+		btn1.onclick=function(){
+			var ua = navigator.userAgent.toLowerCase();
+			if (/iphone|ipad|ipod/.test(ua)) {
+				window.open('http://itunes.apple.com/us/app/id1068393450');
+			} else if (/android/.test(ua)) {
+				window.open('http://download.youmengchuangxiang.com/android/specified/xuanyao.3.19.201701101446.apk')
+			}else{
+				window.open('http://www.youmengchuangxiang.com/product.html')
+			}
+		}
+//		btn2.onclick=function(){
+//			var ua = navigator.userAgent.toLowerCase();
+//			if (/iphone|ipad|ipod/.test(ua)) {
+//				window.open('http://itunes.apple.com/us/app/id1068393450 ');
+//			} else if (/android/.test(ua)) {
+//				window.open('http://download.youmengchuangxiang.com/android/specified/xuanyao.3.19.201701101446.apk')
+//			}
+//		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="../../../../lib/mobile/mobile.js"></script>
+<script type="text/javascript">
+	if(!MobileJS.isMobile()){
+		window.location.href="http://www.youmengchuangxiang.com/product.html";
+	}
+</script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>《最喜欢的排位赛模式》</title>
+<link rel="stylesheet" href="../../css/reset.css" />
+<link rel="stylesheet" href="../../../../lib/confirm/confirm.css" />
+<style type="text/css">
+	html,body{max-width: 640px;margin: 0 auto;}
+	#wrap{width: 100%;overflow: hidden;position:relative;}
+	#wrap img{display: block;width: 100%;}
+	.btn {width: 92.8%;margin-left: 7.1%;height: 52%;background: transparent;border-radius: 3px;}
+	#btn3 {position: absolute;top: 87%;width: 46.8%;left: 28.1%;height: 4.3%;background: transparent;margin-left: -1%;border-radius: 3px;}
+	.likeCount1{color: #FFFFFF;font-size: 12px;display: inline-block;margin-left: 6%;margin-top: 8%;}
+	.content{width: 100%;height: 6%;position: absolute;top: 42.2%;padding-left: 16px;}
+	.content li{float: left;width: 30%;height: 100%;}	
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<img src="H5.jpg"/>
+		<ul class="content"></ul>
+		<button id="btn3"></button>
+	</div>
+<script src="../../../../lib/jquery/js/jquery.min.js"></script>
+<script src="../../../../lib/oss/aliyun-sdk.min.js"></script>
+<script src="../../../../lib/oss/oss-js-upload.js"></script>
+<script src="../../../../lib/md5/spark-md5.js"></script>
+<script src="../../../../lib/localresize/lrz.bundle.js"></script>
+<script src="../../../../lib/emoji/emoji.js"></script>
+<script src="../../../../lib/cryptojs/min.js?_d=1464599152022"></script>
+<script src="../../../../lib/device/device.js?_d=1464599152022"></script>
+<script src="../../../../lib/confirm/confirm.js"></script>
+<script src="../../../../lib/upload/upload.js"></script>
+<script src="js.js?_d=1464599152023"></script>
+<script>
+	var	btn1=document.getElementById("btn3");
+			ua = navigator.userAgent.toLowerCase();
+		btn1.onclick=function(){
+			if (/iphone|ipad|ipod/.test(ua)) {
+				window.open('http://itunes.apple.com/us/app/id1068393450');
+			} else if (/android/.test(ua)) {
+				window.open('http://download.youmengchuangxiang.com/android/specified/xuanyao.3.19.201701101446.apk')
+			}else{
+				window.open('http://www.youmengchuangxiang.com/product.html')
+			}
+		}
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" id="html">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+	<title>转盘抽奖</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="../../../lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="stylesheet" href="../../../lib/confirm/confirm.css" />
+</head>
+<body>
+	<div class="container-fluid wrap" style="padding: 0">
+		<div class="row">
+			<div class="col-xs-12">
+				<img src="img/bg1.jpg" style="width: 100%;margin: 0 auto"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12" style="position: relative;height: 100%;text-align: center">
+				<img src="img/bg2.jpg" style="width: 100%;margin: 0 auto"/>
+				<p class="userSurplusCount">剩余抽奖次数 : <span></span></p>
+				<button class="rotaryArrow" id="rotaryArrow"><img src="img/zhen.png"/></button>
+				<div class="result" id="result">
+
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12" style="position: relative;">
+				<img src="img/bg4.jpg" style="width: 100%;margin: 0 auto"/>
+				<div class="list_lh">
+					<ul class="uesrPrize"></ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<img src="img/bg5.jpg" style="width: 100%;margin: 0 auto"/>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 ">
+				<div class="fx-tq navbar-fixed-bottom" style="height: 23%;background-color: #239165;display: none">
+					<button class="btn7" name="weibo"><img src="img/weibo.png" alt=""/></button>
+					<button class="btn3" name="weixin"><img src="img/weixin.png" alt=""/></button>
+					<button class="btn4" name="weixin_pyq"><img src="img/pyq.png" alt=""/></button>
+					<button class="btn5" name="qq"><img src="img/qq.png" alt=""/></button>
+					<button class="btn6" name="qq_zone"><img src="img/kj.png" alt=""/></button>
+				</div>
+				<img class="fx navbar-fixed-bottom" src="img/fx.jpg" style="width: 100%;margin: 0 auto"/>
+
+			</div>
+		</div>
+	</div>
+	<script src="../../../lib/jquery/js/jquery.min.js"></script>
+	<script src="js/jquery.rotate.min.js"></script>
+	<script src="js/scroll.js"></script>
+	<script src="../../../lib/confirm/confirm.js"></script>
+	<script src="../../../lib/common/common.js"></script>
+    <script src="../../../lib/cryptojs/signature.js"></script>
+	<script src="../../api/api.js?d=1475231766876"></script>
+	<script src="../../../lib/device/device.js?d=1475231766876"></script>
+	<script src="js/index.js?d=1475231766122"></script>
+</body>
+</html>

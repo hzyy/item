@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../../../../lib/mobile/mobile.js"></script>
+	<script type="text/javascript">
+		if(!MobileJS.isMobile()){
+			// window.location.href="http://www.youmengchuangxiang.com/app/activity/seh/pc/index.html";
+		}
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=200, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>《赛尔号》</title>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<style type="text/css">
+		html,body{
+			max-width: 640px;
+			margin: 0 auto;
+		}
+		#wrap{
+		  width: 100%;
+		  
+		  overflow: hidden;
+		  position:relative;
+		}
+		#wrap img{
+		  display: block;
+		  width: 100%;
+		}
+		#btn1 {
+		    position: absolute;
+		    top: 13.6%;
+		    width: 41.2%;
+		    left: 30.5%;
+		    height: 2.1%;
+		    background: transparent;
+		    border-radius: 4px;
+		}
+		#btn2 {
+		    position: absolute;
+		    top: 91.9%;
+		    width: 32.2%;
+		    left: 14.5%;
+		    height: 1.8%;
+		    background: transparent;
+		    border-radius: 23px;
+		}
+		#btn3 {
+		    position: absolute;
+		    top: 91.9%;
+		    width: 32.2%;
+		    left: 54.5%;
+		    height: 1.8%;
+		    background: transparent;
+		    border-radius: 23px;
+		}		
+	</style>
+	<script src="../../../../lib/sitestat/baidu.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<img src="h5.png"/>
+		<button id="btn1" ></button>
+		<button id="btn2" ></button>
+		<button id="btn3" ></button>
+	</div>
+	<script>
+		var	btn1=document.getElementById("btn1"),
+			btn2=document.getElementById("btn2"),
+			btn3=document.getElementById("btn3");
+			ua = navigator.userAgent.toLowerCase();
+		btn1.onclick=function(){
+			if (/iphone|ipad|ipod/.test(ua)) {
+				window.open('http://itunes.apple.com/us/app/id1068393450');
+			} else if (/android/.test(ua)) {
+				window.open('http://download.youmengchuangxiang.com/android/specified/xuanyao.3.19.201701101446.apk')
+			}else{
+				window.open('http://www.youmengchuangxiang.com/product.html')
+			}
+		}
+		btn2.onclick=function(){
+			if (/iphone|ipad|ipod/.test(ua)) {
+				window.open('http://itunes.apple.com/us/app/id1068393450');
+			} else if (/android/.test(ua)) {
+				window.open('http://download.youmengchuangxiang.com/android/specified/xuanyao.3.19.201701101446.apk')
+			}else{
+				window.open('http://www.youmengchuangxiang.com/product.html')
+			}
+		}		
+		btn3.onclick=function(){
+			if (/iphone|ipad|ipod/.test(ua)) {
+				window.open('https://itunes.apple.com/cn/app/sai-er-hao-chao-ji-ying-xiong/id1064367739?l=zh&ls=1&mt=8');
+			} else if (/android/.test(ua)) {
+				window.open('http://seerdownload.crimoon.net/package/170/seer_Android_skymoons_Andorid_1.1.6_201607041828GW.apk')
+			}else{
+				window.open('http://seer.crimoon.net/')
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../../../../lib/mobile/mobile.js"></script>
+	<script type="text/javascript">
+		if(!MobileJS.isMobile()){
+			window.location.href="http://www.youmengchuangxiang.com/app/activity/sm/pc/index.html";
+		}
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=200, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>玩神魔大陆 赢超值好礼</title>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<style type="text/css">
+		html,body{
+			max-width: 640px;
+			margin: 0 auto;
+		}
+		#wrap{
+		  width: 100%;
+		  
+		  overflow: hidden;
+		  position:relative;
+		}
+		#wrap img{
+		  display: block;
+		  width: 100%;
+		}
+		#btn1 {
+			position: absolute;
+			top: 17%;
+			width: 40.2%;
+			left: 9.5%;
+			height: 2.9%;
+			background: transparent;
+			margin-left: -1%;
+			border-radius: 4px;
+		}
+		#btn2 {
+			position: absolute;
+			top: 17%;
+			width: 40.2%;
+			left: 52.5%;
+			height: 2.9%;
+			background: transparent;
+			margin-left: -1%;
+			border-radius: 4px;
+		}
+	</style>
+	<script src="../../../../lib/sitestat/baidu.js"></script>
+</head>
+<body>
+	<div id="wrap">
+		<img src="h5.jpg"/>
+		<button id="btn1" class="btn"></button>
+		<button id="btn2" class="btn"></button>
+	</div>
+	<script>
+		var	btn1=document.getElementById("btn1"),
+				btn2=document.getElementById("btn2");
+		btn1.onclick=function(){
+			var ua = navigator.userAgent.toLowerCase();
+			if (/iphone|ipad|ipod/.test(ua)) {
+				window.open('https://itunes.apple.com/cn/app/shen-mo-da-lu3d/id765508525?mt=8');
+			} else if (/android/.test(ua)) {
+				window.open('http://manuallyclientyd.dl.wanmei.com/client/20160921.apk')
+			}else{
+				window.open('http://smdl.laohu.com/download/')
+			}
+		}
+		btn2.onclick=function(){
+			var ua = navigator.userAgent.toLowerCase();
+			if (/iphone|ipad|ipod/.test(ua)) {
+				window.open('http://itunes.apple.com/us/app/id1068393450');
+			} else if (/android/.test(ua)) {
+				window.open('http://download.youmengchuangxiang.com/android/specified/xuanyao.3.19.201701101446.apk')
+			}else{
+				window.open('http://www.youmengchuangxiang.com/product.html')
+			}
+		}
+	</script>
+</body>
+</html>

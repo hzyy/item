@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN" id="html" >
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>《端午节，玩什么？》</title>
+	<link rel="stylesheet" href="../../../lib/confirm/confirm.css" />
+	<link rel="stylesheet" href="../css/reset.css" />
+	<style type="text/css">
+		html,body{max-width: 640px;margin: 0 auto;font-size: 20px;}
+		#wrap{width: 100%;overflow: hidden;position:relative;}
+		.bg-img{display: block;width: 100%;}
+		#topic {box-sizing: border-box;position: absolute;bottom: 0%;width: 100%;height: 60%;padding: 2% 10%;}
+		#topic li:last-child{border-bottom: 0;}
+		.topic-content{box-sizing: border-box;width: 100%;height: 20%;float: left;border-bottom: 1px dashed #a8a8a8;padding: 5% 0;}
+		.content-img{float: left;width: 50%;height: 100%;}
+		.content{float: right;width: 45%;height: 100%;position: relative;}
+		.content-title{margin: 0;color: #FFFFFF;font-size: 1rem;overflow: hidden;display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient: vertical;}
+		.content-title p{font-size: 1.5rem;text-indent:1rem}
+		.content-body {  height: 30%;overflow: hidden}
+		.content-body img {float: left;width: 22%;height: 80%;border-radius: 50%;margin-top: 0.5rem}
+		.content-foot span{font-size: 1rem;line-height: 2.4rem;width: 30%;display: inline-block;}
+		.content-title img{width: 25%;height: 100%;margin-right:8%;border-radius: 50%;float: left}
+		.content-img img{width: 100%;height: 100%;border-radius: 5px;}
+		.content-foot{text-align: center;position: absolute;bottom: 0%;height: 30%;width: 100%;color: #FFFFFF;font-size: 1rem;}
+		#btn-like{display: inline-block;width: 50%;height: 85%;background: url("zan.png")no-repeat bottom ;background-size: 100%;}
+		.username{color:#ccc; font-size: 1rem;margin-top: 0.5rem;margin-left: 1rem;;display: inline-block;
+			overflow: hidden;
+			width: 60%;}
+	</style>
+</head>
+<body>
+<div id="wrap">
+	<img src="dw.png" class="bg-img" />
+	<ul id="topic"></ul>
+</div>
+<script src="../../../lib/jquery/js/jquery.min.js"></script>
+<script src="../../../lib/cryptojs/signature.js"></script>
+<script src="../../../lib/confirm/confirm.js" ></script>
+<script src="../../../lib/sitestat/baidu.js"></script>
+	<script src="../../../lib/mobile/mobile.js"></script>
+<script src="../../../lib/common/common.js"></script>
+<script src="../../../lib/device/device.js?_d=1464599152024"></script>
+<script src="../../api/api.js?d=1475231766876"></script>
+<script src="js.js?_d=1464599152039"></script>
+<script type="text/javascript">
+	//		rem布局设置
+	var win = document.getElementById('html');
+	var w = document.documentElement.clientWidth;
+	win.style.fontSize = w*0.0104166 + 'px';
+	window.onresize = function(){
+		var w = document.documentElement.clientWidth;
+		win.style.fontSize = w*0.0104166 + 'px';
+	}
+</script>
+</body>
+</html>
+

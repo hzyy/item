@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title>中国首届玩家盛典活动_新浪游戏_新浪网</title>
+		
+<meta name="keywords" content="玩家盛典,玩家盛典首页,玩家盛典官网,报名,招募" />
+<meta name="description" content="新浪游戏主办首届玩家盛典活动，评选出每款游戏人气王玩家，并获终极大奖，炫出真实力，我是游戏王，火热报名中">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link href="http://games.sina.com.cn/308/2014/reset.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" type="text/css" href="http://n3.sinaimg.cn/games/waphome/wapgame.css">
+    <link href="http://games.sina.com.cn/blank/css/2016-12-08/doc--ifxypipt0524985.css" type="text/css" rel="stylesheet" />
+    <script src='http://n.sinaimg.cn/game/font/js/zepto.min.js'></script>
+    <script>
+        // 字号初始化
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 +"px";
+    </script>
+</head>
+<body>
+
+<div class="cry" style="width:100%;height:100%;position:fixed;top:0;left:0;z-index: 0;"></div>
+
+<!--loadding-->
+<div class="loading page1 preload-L">
+    <div class="circle preload-L">
+        <div class="circle-light am-loading preload-L"></div>
+        <div class="loading-f preload-L">
+            <p><span></span>%</p>
+        </div>
+    </div>
+</div>
+<!--第二页-->
+<div class="page2">
+    <!--首屏-->
+    <!--注意！！！如果是首页，class不用加"MODULE"；如果是单游戏页，class加上"MODULE"-->
+    <div class="first ">
+
+        <div class="fibg">
+            <!--首页的首屏背景图片 begin-->
+            <img class="preload-M INDEX" src="http://n.sinaimg.cn/games/779860c8/20161124/bg-1-a.jpg">
+            <!--首页的首屏背景图片 end-->
+
+            <!--单游戏页的首屏背景图片 begin-->
+            <!--注意！！！根据游戏，替换此处图片，尺寸 750 * 1334 -->
+            <img class="preload-M MODULE" src="http://n.sinaimg.cn/games/wjsdwap/banner-bg.jpg">
+            <!--单游戏页的首屏背景图片 end-->
+        </div>
+
+        <div class="fibg layer" data-depth="0.3">
+            <!--首页的浮动元素 begin-->
+            <img class="preload-M INDEX" src="http://n.sinaimg.cn/games/779860c8/20161124/bg-pra-1.png">
+            <!--首页的浮动元素 end-->
+
+            <!--单游戏页的浮动元素 begin-->
+            <img class="preload-M MODULE" src="http://n.sinaimg.cn/games/wjsdwap/banner-fl.png">
+            <!--单游戏页的浮动元素 end-->
+        </div>
+
+
+        <div class="bg1-star layer" data-depth="0.15">
+            <div class="bg1-star1 star1 preload-M"></div>
+            <div class="bg1-star2 star1 star2 preload-M"></div>
+            <div class="bg1-star3 star1 star3 preload-M"></div>
+        </div>
+        <div class="first-con layer" data-depth="0">
+
+<!--通用头-->
+
+            
+
+            <header class="topheader">
+                <details>新浪游戏</details>
+                <a href="http://sina.cn/?vt=4" class="logoleft" target="_blank"><i class="logo"></i></a>
+                <span><a href="http://games.sina.cn/?vt=4" target="_blank">新浪游戏</a></span>
+                <span class="s-space">|</span>
+                <span><a href="http://www.youmengchuangxiang.com/app/install/index.html" target="_blank">炫耀党APP</a></span>
+                <a href="https://passport.sina.cn/signin/signin?vt=4&amp;entry=gamesina&amp;revalid=1&amp;r=http%3A%2F%2Fgames.sina.cn%2F%3Ffrom%3Dwap"><span class="login-not"></span></a>
+            </header>
+<style>
+                body{font-size:14px;}
+                .topheader{font-size: 0;}
+                .topheader .s-space{font-family: '宋体';vertical-align: 1px;color:#dddddd;margin:0 8px;}
+                .topheader{position:absolute;width:100%;top:0;left:0;z-index: 1}
+                .topheader span{font-size: 14px;}
+                @media (min-width: 360px) {
+                    body{font-size:16px;}
+                    .topheader span{font-size: 16px;}
+                }
+            </style>
+            <!--通用头 end-->
+
+            <!--首页的首屏相关内容 begin-->
+            <!--首页首屏的火热报名链接-->
+            <a href="http://weibo.com/p/100808dcadc84c25c520953f8aa425210b776e?k=%E7%8E%A9%E5%AE%B6%E7%9B%9B%E5%85%B8&from=501&_from_=huati_topic" class="INDEX hot lyy-1" target="_blank">
+                <img class="preload-M" src="http://n.sinaimg.cn/games/wjsdwap/h51214.png">
+            </a>
+            <div class="INDEX t-tri tri-r1 preload-M"></div>
+            <div class="INDEX t-hdjs">
+                <p class="nav-en">ABOUT</p>
+            </div>
+            <p class="INDEX jswz lyy-2">中国首届人气玩家票选活动——玩家盛典开幕，玩家只要发布话题微博即可参与报名，人气玩家将晋级进入投票阶段，最终评出游戏人气王大奖。</p>
+            <!--首页的首屏相关内容 end-->
+
+
+            <!--单游戏页的首屏相关内容 begin-->
+            <!--游戏logo链接-->
+            <a href="javascript:void(0)" class="single-a-logoA MODULE"></a>
+            <!--玩家盛典logo链接-->
+            <a href="javascript:void(0)" class="single-a-logoB MODULE"></a>
+            <!--火热报名logo链接-->
+            <a href="javascript:void(0)" class="single-a-logoC MODULE  lyy-1">
+                <img class="preload-M" src="http://n.sinaimg.cn/games/wjsdwap/h51214.png">
+            </a>
+            <p class="MODULE jswz lyy-2">中国首届人气玩家票选活动——玩家盛典开幕，玩家只要发布话题微博即可参与报名，人气玩家将晋级进入投票阶段，最终评出游戏人气王大奖。</p>
+            <!--单游戏页的首屏相关内容 end-->
+
+            <div class="t-darrow lyy-3 preload-M"></div>
+        </div>
+    </div>
+    <!--流程-->
+    <div class="liu-cheng preload-M">
+        <div class="liu-cheng-con">
+            <p class="nav-en">ACTIVITY FLOW</p>
+            <dl class="liu-cheng-ddl">
+                <dt class=" lyy-4-1 preload-M"><i class="date1 preload-M"></i></dt>
+                <dd>
+                    <p class="d-title  lyy-4-2"><B>玩家报名海选</B> </p>
+                    <div class="d-div">
+                        <div class="l-yq">
+                            <p class="l-yq-title  lyy-4-3">所有游戏所有玩家均可通过发布微博或微博文章参加活动，微博内容需包括：</p>
+                            <p class=" lyy-4-4">1. 同时加入 #玩家盛典# 和 #对应游戏名称# 两个话题；</p>
+                            <p class=" lyy-4-5">2. 讲述自己的游戏经历，事迹，感受，以图片或视频形式展示；</p>
+                            <p class=" lyy-4-6">（海选期间，转发<A HREF="http://weibo.com/u/5692849115" style=" display:inline; margin-top:0px; height:auto; background-image:none" target="_blank"> <FONT COLOR="#a37700">本条微博</FONT></A>，关注"炫耀社区"并@三位好友，将有几率获海量现金红包。中奖名单会在每天中午12点在炫耀社区官方微博公布。）</p>
+                            
+                            <a class=" lyy-4-8 preload-M" href="http://weibo.com/p/100808dcadc84c25c520953f8aa425210b776e?k=%E7%8E%A9%E5%AE%B6%E7%9B%9B%E5%85%B8&from=501&_from_=huati_topic" target="_blank"></a>
+                        </div>
+                    </div>
+                </dd>
+                <dt class=" lyy-4-9"><i class="date2 preload-M"></i></dt>
+                <dd>
+                    <p class="d-title  lyy-4-10"><B>晋级投票阶段</B></p>
+                    <p class=" lyy-4-11">海选结束后我们将从人气较高的游戏中，选出数百名玩家晋级进入投票阶段，对应玩家将获得晋级奖一份（此阶段需确认晋级玩家及游戏身份）。</p>
+                </dd>
+                <dt class=" lyy-4-12"><i class="date3 preload-M"></i></dt>
+                <dd>
+                    <p class="d-title  lyy-4-13"><B>游戏人气王诞生</B></p>
+                    <p class="4 lyy-4-14">我们将评选出每款游戏人气王，赢得游戏专属极品大奖。</p>
+                </dd>
+                <dt class=" lyy-4-15"><i class="date4 preload-M"></i></dt>
+                <dd>
+                    <p class="d-title  lyy-4-16"><B>玩家盛典颁奖</B></p>
+                    <p class=" lyy-4-17">获奖玩家将受邀参加新浪游戏豪华线下玩家盛典，颁发人气王奖杯和游戏极品大奖，微博"XX游戏人气王"加V认证。</p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+    <!--奖品-->
+    <div class="jiang-pin preload-M">
+        <div class="jiang-pin-con">
+            <p class="nav-en">PRIZES</p>
+            <div class="jiangpin-s">
+                <ul>
+                    <li class="preload-M">
+                        <p class="l-title">游戏人气王大奖</p>
+                        <p class="l-con">每款热门游戏将投票选出一名玩家获游戏专属极品大奖，微博人气王认证，颁发奖杯。</p>
+                        <img class="preload-M" src="http://n.sinaimg.cn/games/779860c8/20161124/g1.png" style="width:100%;left:0;bottom:0;" >
+                    </li>
+                    <li class="preload-M">
+                        <p class="l-title">晋级奖</p>
+                        <p class="l-con">微博人气高的玩家将晋级进入投票环节，并获晋级奖一份，奖品为对应游戏周边或200元京东卡。</p>
+                        <img class="preload-M" src="http://n.sinaimg.cn/games/779860c8/20161124/g2.png" style="width:100%;left:0;top:0;">
+                    </li>
+                    <li class="preload-M">
+                        <p class="l-title">海选转发奖</p>
+                        <p class="l-con">海选期间，转发<A HREF="http://weibo.com/u/5692849115" style=" display:inline; margin-top:0px; height:auto; background-image:none" target="_blank"> <FONT COLOR="#a37700">本条微博</FONT></A>，关注"炫耀社区"并@三位好友，将有几率获海量现金红包。</p>
+                        <A HREF="http://weibo.com/u/5692849115" target="_blank"><img class="preload-M" src="http://n.sinaimg.cn/games/779860c8/20161124/g4.png" style="width:100%;left:0;"></A>
+                    </li>
+                    <li class="preload-M">
+                        <p class="l-title">投票抽奖</p>
+                        <p class="l-con">玩家在投票环节参加投票后，即有机会抽奖一次，奖品包括iphone7手机、Q币、京东卡等。</p>
+                        <img class="preload-M" src="http://n.sinaimg.cn/games/779860c8/20161124/g3.png" style="width:100%;left:0;top:5px;">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--媒体-->
+    <div class="mei-ti-top preload-M">
+        <div class="mei-ti-top-con">
+            <p class="nav-en">MEDIA</p>
+        </div>
+    </div>
+    <div class="mei-ti-middle">
+        <ul>
+            <li><img class="preload-M" src="http://n.sinaimg.cn/games/wjsd/97973-logo.png"></li>
+            <li><img class="preload-M" src="http://n.sinaimg.cn/games/wjsd/sinadj2.jpg"></li>
+            <li><img class="preload-M" src="http://n.sinaimg.cn/games/wjsd/sinavr2.jpg"></li>
+
+        </ul>
+    </div>
+    <div class="mei-ti-bottom preload-M"></div>
+    <!--下载-->
+    <div class="xia-zai preload-M">
+        <div class="xia-zai-con">
+            <div class="xia-zai-con-d">
+                <div class="xia-zai-con-d-1">
+                    <A HREF="http://games.sina.com.cn/o/kb/12392.shtml"  target="_blank"><img class="preload-M" src="http://n.sinaimg.cn/games/wjsdwap/sinaapp.png"></A>
+                </div>
+                <div class="xia-zai-con-d-2">
+                    新浪游戏APP
+                </div>
+                <div class="xia-zai-con-d-3 preload-M">
+                    <div class="xia-zai-con-d-3-i lyy-6 preload-M"></div>
+                </div>
+            </div>
+            <div class="xia-zai-con-d">
+                <div class="xia-zai-con-d-1">
+                    <A HREF="http://www.youmengchuangxiang.com/app/install/index.html" target="_blank"><img class="preload-M" src="http://n.sinaimg.cn/games/wjsdwap/xuanyaoapp.png"></A>
+                </div>
+                <div class="xia-zai-con-d-2">
+                    炫耀党APP
+                </div>
+                <div class="xia-zai-con-d-3">
+                    <div class="xia-zai-con-d-3-i lyy-6"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--底-->
+    <div class="foot preload-M"></div>
+</div>
+<!--按钮-->
+<div class="sus fadeIn">
+    <div class="share-wei share-weiXin"><img class="preload-M" src="http://n.sinaimg.cn/games/779860c8/20161125/we-sus.png"></div>
+    <div class="share-wei share-weiBo"><a href="javascript:void((function(s,d,e){try{}catch(e){}var%20f='http://v.t.sina.com.cn/share/share.php?',u='',p=['url=',e(u),'&title=中国首届玩家盛典火热报名中！&appkey=&pic=http://n.sinaimg.cn/games/wjsdwap/weixin.jpg'].join('');function a(){if(!window.open([f,p].join(''),'mb'))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));"><img class="preload-M" src="http://n.sinaimg.cn/games/779860c8/20161124/weibo.png"></a></div>
+    <div class="uptop"><img class="preload-M" src="http://n.sinaimg.cn/games/779860c8/20161124/up.png"></div>
+</div>
+<script>
+    $(".uptop").click(function(){
+        $("html,body").animate({scrollTop:0},500);
+    })
+    $(".share-weiXin").click(function(){
+        $("body").append("<div class='shadow' onclick='removeShadow()'></div>");
+        document.addEventListener("touchmove",notouchmove,false);
+    });
+    function notouchmove(){
+        var e = event || window.event;
+        e.preventDefault();
+    }
+    function removeShadow(){
+        $(".shadow").remove();
+        document.removeEventListener("touchmove",notouchmove,false);
+    }
+</script>
+</body>
+<script src="http://games.sina.com.cn/blank/js/2016-12-07/doc--ifxyiayq2661723.js"></script>
+<script src="http://games.sina.com.cn/blank/js/2016-12-07/doc--ifxyiayq2661614.js"></script>
+<script>
+    $(function(){
+        //首屏高
+        var f_height = 0,
+                p_height = 0;
+        if (window.DeviceMotionEvent) {
+            window.addEventListener('devicemotion',function(){
+
+            }, false);
+        }
+        $(".first").parallax();
+
+        if(ismobile() == 0){
+            if(!isWeiXin()){
+                $(".first").addClass("safari");
+            }
+        }
+        var images_before=getPreloadImages("preload-L");
+        var images_after = getPreloadImages("preload-M");
+        preloadimages(images_before,showPage1);
+        function showPage1(){
+            $(".page1").show();
+            /**/
+            f_height = document.documentElement.clientHeight;
+            /**/
+            preloadimages(images_after,showPageIndex,count);
+        }
+        function showPageIndex(){
+            setTimeout(function(){
+                $(".page1").hide();
+                $(".page2").show();
+
+                $(".first").css("height",f_height);
+                $(".page2").css("webkitTransform","translate3d(0,0,0)");
+
+                p_height = $(".page2").height();
+            },500);
+        }
+        function count(){
+            var m = arguments[0],
+                    n = arguments[1];
+            $(".loading-f p span").html(Math.ceil((m * 100)/n));
+        }
+
+        /*************内容页滑动相关**************/
+        var p = {x:0,y:0},//初始坐标
+                q = {x:0,y:0},//滑动坐标
+                direction = "vertical",//滑动方向
+                direction_flag = 0,//direction判定标识，一次触摸只判定一次
+                t1,t2;//滑动开始和结束的时间
+        var ele = document.querySelector(".page2");
+        var start = 0;
+        var page_index = 1;
+        if(page_index == 1){
+            $("body").addClass("bofh");
+        }
+        var touchflag = 0;
+        ele.addEventListener("touchstart",function(e){
+            p.x = e.touches[0].pageX;
+            p.y = e.touches[0].pageY;
+            t1 = new Date().getTime();
+            start = getOffsetY(ele.style.webkitTransform);
+        },false);
+        ele.addEventListener("touchmove",function(e){
+            q.x = e.touches[0].pageX;
+            q.y = e.touches[0].pageY;
+            if(direction_flag == 0){
+                direction = judgeDirection();
+                direction_flag = 1;
+            }
+            console.log(document.body.scrollTop)
+            if(page_index == 1){
+                if(direction == "vertical" && p.y-q.y > 0){
+                    e.preventDefault();
+                    var k = start + q.y - p.y;
+                    ele.style.webkitTransitionDuration = "0s";
+                    ele.style.webkitTransform = "translate3d(0,"+k+"px,0)";
+                }
+            }
+            if(page_index != 1){
+                if(direction == "vertical" && p.y-q.y < 0 && document.body.scrollTop == 0){
+                    e.preventDefault();
+                    var k = start + q.y - p.y;
+                    ele.style.webkitTransitionDuration = "0s";
+                    ele.style.webkitTransform = "translate3d(0,"+k+"px,0)";
+                }
+            }
+        },false);
+        ele.addEventListener("touchend",function(e){
+            q.x = e.changedTouches[0].pageX;
+            q.y = e.changedTouches[0].pageY;
+            direction_flag = 0;
+            t2 = new Date().getTime();
+
+            if(page_index == 1){
+                if(direction == "vertical" && p.y-q.y > 0){
+                    if(t2-t1 > 200){
+                        if(getOffsetY(ele.style.webkitTransform) < -f_height/5){
+                            ele.style.webkitTransitionDuration = "0.5s";
+                            ele.style.webkitTransform = "translate3d(0,"+(-f_height)+"px,0)";
+                            $("body").removeClass("bofh");
+                            page_index = 2;
+                        }else{
+                            ele.style.webkitTransitionDuration = "0.5s";
+                            ele.style.webkitTransform = "translate3d(0,0,0)";
+                            $("body").addClass("bofh");
+                            page_index = 1;
+                        }
+                    }else{
+                        ele.style.webkitTransitionDuration = "0.5s";
+                        ele.style.webkitTransform = "translate3d(0,"+(-f_height)+"px,0)";
+                        $("body").removeClass("bofh");
+                        page_index = 2;
+                    }
+                }
+            }
+            if(page_index != 1){
+                if(direction == "vertical" && p.y-q.y < 0 && document.body.scrollTop == 0){
+                    if(t2-t1 > 200){
+                        if(getOffsetY(ele.style.webkitTransform) > -f_height*4/5){
+                            ele.style.webkitTransitionDuration = "0.5s";
+                            ele.style.webkitTransform = "translate3d(0,0,0)";
+                            $("body").addClass("bofh");
+                            page_index = 1;
+                        }else{
+                            ele.style.webkitTransitionDuration = "0.5s";
+                            ele.style.webkitTransform = "translate3d(0,"+(-f_height)+"px,0)";
+                            $("body").removeClass("bofh");
+                            page_index = 2;
+                        }
+                    }else{
+                        ele.style.webkitTransitionDuration = "0.5s";
+                        ele.style.webkitTransform = "translate3d(0,0,0)";
+                        $("body").addClass("bofh");
+                        page_index = 1;
+                    }
+                }
+            }
+        },false);
+        ele.addEventListener("webkitTransitionEnd",function(){
+            if(getOffsetY(ele.style.webkitTransform) != 0){
+                $(".page2").css("height",p_height-f_height);
+                $(".liu-cheng-ddl").css("visibility","visible");
+                $(".liu-cheng-ddl").addClass("lyy-4");
+                $(".sus").show();
+            }else{
+
+                f_height = $(".cry").height();
+                $(".first").css("height",f_height);
+                p_height = $(".page2").height();
+
+                $(".page2").css("height",p_height);
+//                $(".liu-cheng-ddl").css("visibility","hidden");
+//                $(".liu-cheng-ddl").removeClass("lyy-4");
+                $(".sus").hide();
+            }
+        },false);
+        //判断方向 水平： horizontal，垂直：vertical;
+        function judgeDirection(){
+            var res = "";
+            if(Math.abs(q.y-p.y) < Math.abs(q.x-p.x) ){
+                res = "horizontal";
+            }else{
+                res = "vertical";
+            }
+            return res;
+        }
+        //获取纵向位移偏移量
+        function getOffsetY(tranform){
+            if(tranform == ""){
+                return 0;
+            }else{
+                return parseFloat(tranform.split(",")[1]);
+            }
+        }
+        /*************内容页滑动相关**************/
+
+        window.addEventListener("scroll",function(){
+            var x = document.body.scrollTop/(document.documentElement.clientWidth/7.5);
+            if(x >20){
+                $(".jiangpin-s ul li").show().addClass("lyy-5");
+            }
+        },false);
+    });
+
+    //图片预加载
+    function preloadimages(arr,func,count){
+        var newimages=[], loadedimages=0;
+        var arr=(typeof arr!="object")? [arr] : arr;
+        for (var i=0; i<arr.length; i++){
+            newimages[i]=new Image();
+            newimages[i].src=arr[i];
+            newimages[i].onload=function(){
+                imageloadpost();
+            }
+            newimages[i].onerror=function(){
+                imageloadpost();
+            }
+        }
+        function imageloadpost(){
+            loadedimages++;
+            if(count){
+                count(loadedimages,arr.length);
+            }
+            if (loadedimages==arr.length){
+                //预加载完成
+                if(func){
+                    func();
+                }
+            }
+        }
+    }
+    //判断是安卓还是ios   0:ios   1:android
+    function ismobile(){
+        var u = navigator.userAgent, app = navigator.appVersion;
+        if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+            if(window.location.href.indexOf("?mobile")<0){
+                try{
+                    if(/iPhone|mac|iPod|iPad/i.test(navigator.userAgent)){
+                        return '0';
+                    }else{
+                        return '1';
+                    }
+                }catch(e){}
+            }
+        }else if( u.indexOf('iPad') > -1){
+            return '0';
+        }else{
+            return '1';
+        }
+    };
+    //判断是否是微信浏览器
+    function isWeiXin(){
+        var ua = window.navigator.userAgent.toLowerCase();
+        if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
+    //获取需要预加载的图片
+    function getPreloadImages(className){
+        var images = [];
+        $("."+className).each(function(){
+            var str = getImg(this);
+            if(checkImage(str)){
+                images.push(str)
+            }
+        });
+        return images;
+        function checkImage(obj){
+            var res = true;
+            for(var i = 0;i<images.length;i++){
+                if(images[i] == obj){
+                    res = false;
+                    break;
+                }
+            }
+            return res;
+        }
+        function getImg(obj){
+            if(obj.tagName.toLowerCase() == "img"){
+                return obj.src;
+            }else{
+                return $(obj).css("background-image").split('"')[1];
+            }
+        }
+
+    }
+</script>
+<html>

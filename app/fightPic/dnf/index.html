@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>装X炫图</title>
+<link rel="stylesheet" href="../css/reset.css" />
+<link rel="stylesheet" href="../css/index.css" />
+<link rel="stylesheet" href="../css/swiper.min.css">
+</head>
+<body>
+<div class="loading">
+    <div class="loading1"></div>
+</div>
+<div class="swiper-container">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide">
+            <div class="section" id="section1">
+                <canvas id="canvas1"></canvas>
+                <input id="desc" type="text"  placeholder="这里输入你的昵称"/>
+                <a class="bt1"  id="moveSectionDown" ><img src="../imges/ac1_btn.png" alt=""/></a>
+                <div class="mengban"></div>
+                <div class="tk"></div>
+            </div>
+        </div>
+        <div class="swiper-slide">
+            <div class="section" id="section2">
+                <div class="mengban"></div>
+                <div class="tk"></div>
+                <img class="use" ontouchstart="gtouchstart()" ontouchmove="gtouchmove()" ontouchend="gtouchend()" />
+                <p>长按图片可以保存到相册</p>
+                <a class="btn1"><img src="../imges/fx.png" alt=""/></a>
+                <a class="btn2"><img src="../imges/fb.png" alt=""/></a>
+                <div class="fightpic-more">
+                    <img src="../imges/-fightpic.png" alt=""/>
+                    <span>试试别的</span>
+                </div>
+                <div class="fx-btn1">
+                    <div class="fightpic-fx">
+                        <button class="btn7" name="weibo"><img src="../imges/-weibo.png" alt=""/></button>
+                        <button class="btn5" name="qq"><img src="../imges/-qq.png" alt=""/></button>
+                        <button class="btn3" name="weixin"><img src="../imges/-weixin.png" alt=""/></button>
+                        <button class="btn4" name="weixin_pyq"><img src="../imges/-weixin_pyq.png" alt=""/></button>
+                        <button class="btn6" name="txweibo"><img src="../imges/-tx-weibo.png" alt=""/></button>
+                        <button class="btn6" name="qq_zone"><img src="../imges/-qq_zone.png" alt=""/></button>
+                    </div>
+                    <div class="fx-btn-close">取消</div>
+                </div>
+                <div class="save-group">
+                    <div class="save-pic">保存图片</div>
+                    <div class="save-pic-btn-close">取消</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../../../lib/jquery/js/jquery.min.js"></script>
+<script src="../../../lib/oss/aliyun-sdk.min.js"></script>
+<script src="../../../lib/oss/oss-js-upload.js"></script>
+<script src="../../../lib/common/common.js"></script>
+<script src="../../../lib/md5/spark-md5.js"></script>
+<script src="../../../lib/sitestat/baidu.js"></script>
+	<script src="../../../lib/mobile/mobile.js"></script>
+<script src="../../../lib/confirm/confirm.js"></script>
+<script src="../../../lib/device/device.js"></script>
+<script src="../../../lib/cryptojs/signature.js"></script>
+<script src="../../api/api.js?d=1280977331177"></script>
+<script src="../../report/report.js?d=1280977331177"></script>
+<script src="../js/swiper.min.js"></script>
+<script>
+    var time = null;
+    var pic = 'dnf';
+    time = setTimeout(function () {
+        $(".loading").hide();
+    }, 3000);
+    var timeOutEvent=0;
+    var topicContent = '#炫图神器#';
+    var canvasData;
+    var swiper = new Swiper('.swiper-container', {
+        onlyExternal : true,
+        keyboardControl : false,
+    });
+    function getQueryString(name) {
+        var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+        var r = window.location.search.substr(1).match(reg);
+        if (r != null) return unescape(r[2]);
+        return null;
+    }
+    $('.section').css({"background":'url(../picture/'+pic+'_bg.jpg)no-repeat',"background-size":"cover"})
+    var json = {};
+    var jsonString = {};
+    var title;
+    var content;
+    var imgupload = true;
+    var shareType;
+    var fileUrl;
+    var imageUrl;
+    var url ;
+    function getCanvas(id){
+        return document.getElementById(id);
+    }
+    var ctx=document.getElementById('canvas1');
+    var mainCtx = ctx.getContext('2d');
+    var activity_text;
+    var activity_top;
+    var activity_top2;
+    var activity_left;
+    mainCtx.clearRect(0,0,2000,2000);
+    var starSelectImg = '../picture/'+pic+'_use.jpg';
+    var starImg = new Image();
+    starImg.src=starSelectImg;
+    starImg.onload=function(){
+        mainCtx.drawImage(starImg,0,0);
+        mainCtx.save();
+    };
+    title = "最强法驱就是我";
+    content = "不知我是不是配得上这个称号";
+    ctx.width=800;
+    ctx.height=486;
+    activity_left = 182;
+    activity_left2 = 391;
+    activity_top = 193;
+    activity_top2 = 303;
+    mainCtx.font = "12px";
+    mainCtx.fillStyle = "#fff";
+    mainCtx.textAlign="center";
+    activity1_text = '';
+    $('.bt1').on('click',function(e) {
+        var appVersion = DeviceJS.loginUser.device.appVersion != null && DeviceJS.loginUser.device.appVersion != '' ? DeviceJS.loginUser.device.appVersion : DeviceJS.loginUser.device.version;
+        var text = $('#desc').val();
+        if(!text){
+            sho(3);
+            return false;
+        }else if(text.length > 10){
+            sho(2);
+            return false;
+        }else{
+            sho(4);
+            setTimeout(function () {
+                swiper.slideNext();
+            }, 1500);
+        }
+        mainCtx.fillText(text+activity1_text,activity_left,activity_top);
+        mainCtx.fillStyle = "#fbf4d7";
+        mainCtx.fillText(text+activity1_text,activity_left2,activity_top2);
+        mainCtx.save();
+        canvasData = getCanvas('canvas1').toDataURL('image/jpg');
+        $(".use").attr("src",canvasData);
+        jsonString['img'] = canvasData;
+        jsonString['noteContent'] = topicContent+content;
+        $('.fightpic-more').on('click',function(e) {
+            if (DeviceJS.loginUser.device.deviceType == "android") {
+                if(appVersion.substr(0, 4) < '3.12'){
+                    document.location.href = '/app/activity/dt6/index.html';
+                }else{
+                    window.location.href = 'app://activity/ActivityOperateAction?class=com.ymcx.gamecircle.activity.BucketDiagramListActivity';
+                }
+            } else if(DeviceJS.loginUser.device.deviceType == "ios") {
+                if(appVersion.substr(0, 4) < '3.13'){
+                    document.location.href = '/app/activity/dt6/index.html';
+                }else{
+                    window.location.href = 'gamecircle://topic/bucketChartsList?';
+                }
+            }
+        });
+        $('.btn2').on('touchstart',function(e) {
+            if(appVersion.substr(0, 4) < '3.18'){
+                $(".tk").css({'width':"60%"})
+                sho(6);
+            }else{
+                if(DeviceJS.loginUser.device.deviceType == "android"){
+                    android.quickPublish(JSON.stringify(jsonString));
+                }else{
+                    quickPublish(JSON.stringify(jsonString));
+                }
+
+            }
+        });
+        $(".btn1").click(function(){
+            $(".fx-btn1").slideToggle("fast");
+            $(".mengban").slideToggle("fast");
+        });
+        $(".fx-btn-close").click(function(){
+            $(".fx-btn1").slideToggle("fast");
+            $(".mengban").slideToggle("fast");
+        });
+        $(".save-pic-btn-close").click(function(){
+            $(".save-group").slideToggle("fast");
+            $(".mengban").slideToggle("fast");
+        });
+
+
+        $(".fx-btn1 button").on('touchstart',function(){
+            shareType = $(this).attr("name");
+            var encodeName = encodeURI(encodeURI(text));
+            imageUrl = 'http://www.youmengchuangxiang.com/app/fightPic/picture/'+pic+'_use.jpg';
+            url = 'http://www.youmengchuangxiang.com/app/activity/dt6/share.html?&text=' + encodeName + '&name='+pic+'';
+            json['shareType'] = shareType;
+            json['title'] = title;
+            json['content'] = content;
+            json['imageUrl'] = imageUrl;
+            json['url'] = url;
+            if (appVersion.substr(0, 4) < '3.12') {
+                if (DeviceJS.loginUser.device.deviceType == "android") {
+                    android.share(shareType, title, content, imageUrl, url)
+                } else {
+                    share(shareType, title, content, imageUrl, url)
+                }
+            }else if(appVersion.substr(0, 4) < '3.14'){
+                json['objectId'] = '554792564516675584';
+                if (DeviceJS.loginUser.device.deviceType == "android") {
+                    android.share(JSON.stringify(json))
+                } else {
+                    share(JSON.stringify(json))
+                }
+            } else if(getQueryString('activityCode') && getQueryString('activityCode').length > 0){
+                json['fightpicCode'] = pic;
+                json['activityCode'] = getQueryString('activityCode');
+                if (DeviceJS.loginUser.device.deviceType == "android") {
+                    android.sharePic(JSON.stringify(json))
+                } else {
+                    sharePic(JSON.stringify(json))
+                }
+            }else {
+                json['fightpicCode'] = pic;
+                if (DeviceJS.loginUser.device.deviceType == "android") {
+                    android.sharePic(JSON.stringify(json))
+                } else {
+                    sharePic(JSON.stringify(json))
+                }
+            }
+        })
+    })
+
+    //长按事件
+    function gtouchstart(){
+        timeOutEvent = setTimeout("longPress()",500);
+        return false;
+    };
+    function gtouchmove(){
+        clearTimeout(timeOutEvent);//清除定时器
+        timeOutEvent = 0;
+    };
+    function gtouchend(){
+        clearTimeout(timeOutEvent);//清除定时器
+        return false;
+    };
+    function longPress(){
+        $(".save-group").slideToggle("fast");
+        $(".mengban").slideToggle("fast");
+        $('.save-pic').on('touchstart',function(e) {
+            if(DeviceJS.loginUser.device.deviceType == "android"){
+                android.saveImage(canvasData);
+            }else{
+                downloadImgInApp(canvasData);
+            }
+        });
+    }
+
+
+    function sho(num){
+        if(num==1){
+            $(".mengban").show();
+            $(".tk").show();
+            $(".tk").html('<img src="../imges/text'+num+'.png" />');
+        }else if(num==6){
+            $(".mengban").show();
+            $(".tk").show();
+            $(".tk").html('<img src="../imges/text'+num+'.png" />');
+            setTimeout(function () {
+                $(".mengban").hide();
+                $(".tk").hide();
+            }, 1500);
+        }else{
+            $(".mengban").show();
+            $(".tk").show();
+            $(".tk").html('<img src="../imges/text'+num+'.png" />');
+            setTimeout(function () {
+                $(".mengban").hide();
+                $(".tk").hide();
+            }, 1500);
+        }
+    }
+</script>
+</body>
+</html>

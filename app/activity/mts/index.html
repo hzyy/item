@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN" id="html" >
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>《马桶游戏时光 微博点赞分享》</title>
+	<link rel="stylesheet" href="../../../lib/confirm/confirm.css?_d=1464599152042" />
+	<link rel="stylesheet" href="reset.css" />
+
+	<style type="text/css">
+		.header{position: relative}
+		.center{width: 980px;margin:  0 auto;font-size: 0px;}
+		#wrap .header img{width: 100%;}
+		.topic{margin-top: -1px;min-height: 600px;background: url("bg.jpg") repeat-y;overflow: auto;}
+		.topic .topic-content{float: left;width: 410px;height: 650px;padding: 27px 30px 10px 50px;}
+		.topic-content img{width: 100%;height: 410px}
+		.topic-content .username{font-size: 38px;color: black;margin-top: 10px;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 1;-webkit-box-orient: vertical;}
+		.topic-content .txt{font-size: 30px;color: black;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;}
+		.topic-content button{width: 138px;margin-top: 15px;height: 60px;border-radius: 35px;border: 3px solid #EC3D07;font-size: 26px;padding-left: 50px;padding-bottom: 5px;color: #EC3D07;background:22px 10px url("zan.png")no-repeat;text-align: center;}
+		.xcConfirm .popBox {
+			position: fixed;
+			left: 0;
+			top: 40%;
+			right: 0;
+			background-color: #ffffff;
+			z-index: 2147000001;
+			width: 60%;
+			border-radius: 5px;
+			color: #535e66;
+			margin: auto;
+		}
+		.xcConfirm .popBox .txtBox p {
+			margin-top: 12px;
+			 word-wrap: break-word;
+			height: 74px;
+			text-align: center;
+			font-size: 41px;
+		}
+	</style>
+</head>
+<body>
+<div id="wrap">
+	<div class="header center">
+		<img src="H5.png" class="bg-img" />
+	</div>
+	<ul class="topic center"></ul>
+</div>
+<script src="../../../lib/jquery/js/jquery.min.js"></script>
+<script src="../../../lib/cryptojs/signature.js"></script>
+<script src="../../../lib/confirm/confirm.js" ></script>
+<script src="../../../lib/sitestat/baidu.js"></script>
+	<script src="../../../lib/mobile/mobile.js"></script>
+<script src="../../../lib/common/common.js"></script>
+<script src="../../../lib/device/device.js?_d=1464599152024"></script>
+<script src="../../api/api.js?d=1475231766876"></script>
+<script src="js.js?_d=1464599152039"></script>
+<script type="text/javascript">
+	//		rem布局设置
+	var win = document.getElementById('html');
+	var w = document.documentElement.clientWidth;
+	win.style.fontSize = w*0.0104166 + 'px';
+	window.onresize = function(){
+		var w = document.documentElement.clientWidth;
+		win.style.fontSize = w*0.0104166 + 'px';
+	}
+</script>
+
+</body>
+</html>
+

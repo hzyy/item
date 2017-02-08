@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>示例</title>
+    <link rel="stylesheet" type="text/css" href="../bootstrap/css/bootstrap.min.css" />
+    <style>
+        html, body {
+            height: 100%;
+        }
+        .site-wrapper {
+            display: table;
+            width: 100%;
+            height: 100%; /* For at least Firefox */
+            min-height: 100%;
+        }
+        .site-wrapper-inner {
+            display: table-cell;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+<div class="site-wrapper">
+    <div class="site-wrapper-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">计算签名</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form role="form">
+                                <div class="form-group">
+                                    <label>loginUserId</label>
+                                    <input type="text" class="form-control" id="loginUserId" placeholder="loginUserId" oninput="generate()">
+                                </div>
+                                <div class="form-group">
+                                    <label>nonce</label>
+                                    <input type="text" class="form-control" id="nonce" placeholder="nonce" oninput="generate()">
+                                </div>
+                                <div class="form-group">
+                                    <label>timestamp</label>
+                                    <input type="text" class="form-control" id="timestamp" placeholder="timestamp" oninput="generate()">
+                                </div>
+                                <div class="form-group">
+                                    <label>token</label>
+                                    <input type="text" class="form-control" id="token" placeholder="token" oninput="generate()">
+                                </div>
+                                <p>
+                                    <div class="form-group has-success has-feedback">
+                                        <label>signature</label>
+                                        <input type="text" class="form-control" id="signature" readonly>
+                                        <span class="glyphicon glyphicon-ok form-control-feedback"></span>
+                                    </div>
+                                </p>
+                                <div id="text"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../jquery/js/jquery.min.js"></script>
+<script src="signature.js"></script>
+<script>
+    function generate() {
+        var loginUserId = $("#loginUserId").val();
+        var nonce = $("#nonce").val();
+        var timestamp = $("#timestamp").val();
+        var token = $("#token").val();
+        var text = '';
+        var signature = '';
+        if (loginUserId != null && loginUserId != '') {
+            text += '&loginUserId=' + loginUserId;
+        }
+        if (nonce != null && nonce != '') {
+            text += '&nonce=' + nonce;
+        }
+        if (timestamp != null && timestamp != '') {
+            text += '&timestamp=' + timestamp;
+        }
+        if (text != '') {
+            text = text.substring(1);
+            signature = CryptoJS.enc.Base64.stringify(CryptoJS.HmacSHA1(text, token + '&'))
+        }
+        $("#text").text(text);
+        $("#signature").val(signature);
+    }
+</script>
+</body>
+</html>

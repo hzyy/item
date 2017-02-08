@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="../../../../lib/mobile/mobile.js"></script>
+	<script type="text/javascript">
+		if(MobileJS.isMobile()){
+			window.location.href="http://www.youmengchuangxiang.com/app/activity/xyd/wap/index.html";
+		}
+	</script>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=200, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>《在炫耀党 无处不团》</title>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<style type="text/css">
+		#wrap{width: 100%;overflow: hidden;position:relative;}
+		#wrap img{display: block;width: 100%;}
+		#btn2 {
+			position: absolute;
+			top: 22.8%;
+			width: 15.8%;
+			left: 57.3%;
+			height: 2.8%;
+			background: transparent;
+			margin-left: -1%;
+			border-radius: 0;}
+		#btn1 {
+			position: absolute;
+			top: 19.5%;
+			width: 15.8%;
+			left: 57.3%;
+			height: 2.8%;
+			background: transparent;
+			margin-left: -1%;
+			border-radius: 0;}
+	</style>
+	<script src="../../../../lib/sitestat/baidu.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<img src="px.png"/>
+	<button id="btn2" class="btn"></button>
+	<button id="btn1" class="btn"></button>
+</div>
+<script>
+	var	btn1=document.getElementById("btn1"),
+			btn2=document.getElementById("btn2");
+	btn1.onclick=function(){
+		var ua = navigator.userAgent.toLowerCase();
+		if (/iphone|ipad|ipod/.test(ua)) {
+			window.open('https://itunes.apple.com/cn/app/wang-zhe-rong-yao-quan-qiu/id989673964?mt=8');
+		} else if (/android/.test(ua)) {
+			window.open('http://dlied5.myapp.com/myapp/1104466820/sgame/2017_SGame_App_Android_1.13.2.7_r115321_p.apk')
+		}else{
+			window.open('http://pvp.qq.com/')
+		}
+	}
+	btn2.onclick=function(){
+		var ua = navigator.userAgent.toLowerCase();
+		if (/iphone|ipad|ipod/.test(ua)) {
+			window.open('http://itunes.apple.com/us/app/id1068393450');
+		} else if (/android/.test(ua)) {
+			window.open('http://download.youmengchuangxiang.com/android/specified/xuanyao.3.19.201701101446.apk')
+		}else{
+			window.open('http://www.youmengchuangxiang.com/product.html')
+		}
+	}
+</script>
+</body>
+</html>

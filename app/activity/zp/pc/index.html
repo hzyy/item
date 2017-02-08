@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=200, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>圣诞狂欢夜</title>
+	<link rel="stylesheet" href="../../css/reset.css" />
+	<style type="text/css">
+		#wrap{width: 100%;overflow: hidden;position:relative;}
+		#wrap .bg{display: block;width: 100%;}
+		#btn1{position: absolute;top: 31.4%;width: 11%;left: 65.2%;height: 2%;background: transparent;margin-left: -1%;border-radius: 19px;}
+		#btn2{position: absolute;top: 33.9%;width: 11%;left: 65.2%;height: 2%;background: transparent;margin-left: -1%;border-radius: 19px;}
+		#btn3{
+			position: absolute;
+			top: 64.1%;
+			width: 8.4%;
+			left: 46.8%;
+			height: 4%;
+			background: transparent;
+			margin-left: -1%;
+			border-radius: 100%;}
+		#btn4{position: absolute;width: 100%;top: 0%;left: 0%;z-index: 99;}
+		#btn5{position: absolute;width: 3%;top: 55%;left: 66.6%;z-index: 100;cursor: pointer;}
+	</style>
+	<script src="../../../../lib/sitestat/baidu.js"></script>
+</head>
+<body>
+<div id="wrap">
+	<img class="bg" src="px.png"/>
+	<a href="https://itunes.apple.com/us/app/id1068393450"><button id="btn2"></button></a>
+	<a href="http://download.youmengchuangxiang.com/android/specified/xuanyao.3.19.201701101446.apk"><button id="btn1"></button></a>
+	<button id="btn3"></button>
+	<img id="btn4" src="tq.png" style="display:none">
+	<img id="btn5" src="close.png" style="display:none">
+</div>
+<script src="../../../../lib/jquery/js/jquery.min.js"></script>
+<script>
+	$('#btn3').click(function () {
+		$('#btn4').show()
+		$('#btn5').show()
+	})
+	$('#btn5').click(function () {
+		$('#btn4').hide()
+		$('#btn5').hide()
+	})
+</script>
+</body>
+</html>

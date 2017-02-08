@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <title></title>
+    <link href="css/resert.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="css/wapgame.css">
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <script src='js/zepto.min.js'></script>
+
+    <link href="css/swiper.min.css" rel="stylesheet" type="text/css" >
+    <script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        // 字号初始化
+        document.documentElement.style.fontSize = document.documentElement.clientWidth/7.5 +"px";
+    </script>
+</head>
+<body>
+<div class="cry" style="width:100%;height:100%;position:fixed;top:0;left:0;z-index: 0;"></div>
+
+<!--loadding-->
+<div class="loading page1 preload-L" style="display:block;">
+    <div class="circle preload-L">
+        <div class="circle-light am-loading preload-L"></div>
+        <div class="loading-f preload-L">
+            <p><span></span>%</p>
+        </div>
+    </div>
+</div>
+<!--第二页-->
+<div class="page2">
+    <!--首屏-->
+    <!--注意！！！如果是首页，class不用加“MODULE”；如果是单游戏页，class加上“MODULE”-->
+    <div class="first MODULE">
+        <div class="fibg">
+            <!--首页的首屏背景图片 begin-->
+            <img class="preload-M INDEX" src="http://n.sinaimg.cn/games/779860c8/20161124/bg-1-a.jpg">
+            <!--首页的首屏背景图片 end-->
+
+            <!--单游戏页的首屏背景图片 begin-->
+            <!--注意！！！根据游戏，替换此处图片，尺寸 750 * 1334 -->
+            <img class="preload-M MODULE" src="images/module/banner-bg.jpg">
+            <!--单游戏页的首屏背景图片 end-->
+        </div>
+
+        <div class="fibg layer" data-depth="0.3">
+            <!--首页的浮动元素 begin-->
+            <img class="preload-M INDEX" src="http://n.sinaimg.cn/games/779860c8/20161124/bg-pra-1.png">
+            <!--首页的浮动元素 end-->
+
+            <!--单游戏页的浮动元素 begin-->
+            <img class="preload-M MODULE" src="images/module/banner-fl.png">
+            <!--单游戏页的浮动元素 end-->
+        </div>
+
+
+        <div class="bg1-star layer" data-depth="0.15">
+            <div class="bg1-star3 star1 star3 preload-M"></div>
+        </div>
+        <div class="first-con layer" data-depth="0">
+
+            <!--首页的首屏相关内容 begin-->
+            <!--首页首屏的火热报名链接-->
+            <a href="javascript:void(0)" class="INDEX hot lyy-1">
+                <img class="preload-M" src="http://n.sinaimg.cn/games/779860c8/20161124/f-f.png">
+            </a>
+            <div class="INDEX t-tri tri-r1 preload-M"></div>
+            <div class="INDEX t-hdjs">
+                <p class="nav-en">ACTIVITY FLOW</p>
+            </div>
+            <!--首页（主招募页）限3行文字，单游戏页限两行-->
+            <p class="INDEX jswz lyy-2">新浪游戏主办玩家盛典人气玩家评选活动是中国首个专门为玩家打造的游戏节日报名我们会在微博海的玩家进入复赛投票阶段。</p>
+            <!--首页的首屏相关内容 end-->
+
+            <!--单游戏页的首屏相关内容 begin-->
+            <!--游戏logo链接-->
+            <a href="javascript:void(0)" class="single-a-logoA MODULE"></a>
+            <!--玩家盛典logo链接-->
+            <a href="javascript:void(0)" class="single-a-logoB MODULE"></a>
+            <!--火热报名logo链接-->
+            <a href="javascript:void(0)" class="single-a-logoC MODULE  lyy-1">
+                <img class="preload-M" src="images/vote/vote-date.png">
+            </a>
+            <!--首页（主招募页）限3行文字，单游戏页限两行-->
+            <p class="MODULE jswz lyy-2">新浪游戏主办玩家盛典人气玩家评选活动是中国首个专门为玩家打造的游戏节日报名我们会在微博海的玩家进入复赛投票阶段。</p>
+            <!--单游戏页的首屏相关内容 end-->
+
+            <div class="t-darrow lyy-3 preload-M"></div>
+        </div>
+    </div>
+    <!--玩家投票-->
+    <div class="player-voteh5 preload-M">
+        <div class="player-voteh5-con">
+            <p class="nav-en">PLAYERS VOTE</p>
+            <div class="p2-border preload-M">
+                <div class="p2-border-head">
+                    <img class="preload-M" src="images/vote/ex1.jpg">
+                </div>
+                <div class="p2-border-con">
+                    <div class="p2-border-con-title">这里是标题</div>
+                    <p class="">角色：花房姑娘爱种菜</p>
+                    <p class="">游戏：炉石传说</p>
+                    <p class="">大区：大中华区</p>
+                    <p class="">区服：啦啦啦啦服</p>
+                    <a class="rank-btn-div" href="javascript:void(0)">为TA投票</a>
+                    <p class="h-p-3"><i></i>1234<span class="rank">排名25</span></p>
+                </div>
+            </div>
+            <p class="imp-p">事迹介绍：然而这一个局面有望改善，近日文化部发布《文化部关于规范网络游戏运营加强事中事后监管工作的通知》，明确了网游运营规范，包括“随机抽取不得直接投入法定货币或虚拟货币，应公示抽取或合成概率”、“企业不得向用户提供虚拟道具兑换法定货币的服务”等规定。</p>
+            <div class="swiper-border">
+                <div class="swiper-container play-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img class="preload-M" src="images/bg-1-a.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="preload-M" src="images/bg-2.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="preload-M" src="images/bg-3.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img class="preload-M" src="images/bg-5.jpg">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--抽奖-->
+    <div class="choujiang preload-M">
+        <div class="choujiang-con">
+            <p class="jsjhj"><a href="javascript:showDialog('dialog-1')">介绍及获奖</a></p>
+            <p class="nav-en">ACTIVITY FLOW</p>
+            <!--抽奖转盘-->
+            <div class="choujiang-zp">
+
+            </div>
+            <style>
+                /*提示，技术哥们开发时删掉*/
+                .choujiang-con .choujiang-zp::before{content:'';display:block;width:100%;height:100%;background:url("images/vote/flash/zhuanpan.png");background-size: 100%;}
+                .choujiang-con .choujiang-zp::after{content:'礼品图已切好，麻烦技术哥们实现转盘';display:block;position:absolute;width:100%;height:0.5rem;left:0;top:2.8rem;background: rgba(0,0,0,0.8);text-align: center;}
+                /*提示，技术哥们开发时删掉*/
+            </style>
+            <!--抽奖转盘 end -->
+
+            <p class="choujiang-down">剩余抽奖次数<span>3</span></p>
+            <div class="choujiang-b">
+                <div class="choujiang-b-i"><img src="images/vote/choujiang-b-i.png"></div>
+                <div class="choujiang-b-d">
+                    <p class="choujiang-b-d-title">票数最高玩家：人气王奖</p>
+                    <p>游戏内价值万元极品大奖游戏内</p>
+                    <p>微博游戏王加V认证微博游戏王</p>
+                    <p>参加新浪玩家盛典线下颁奖典礼</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--底-->
+    <div class="foot preload-M"></div>
+</div>
+<!--按钮-->
+<div class="sus fadeIn">
+    <div class="share-wei share-qq_zone"><img class="preload-M" src="images/kj.png"></div>
+    <div class="share-wei share-weixin_pyq"><img class="preload-M" src="images/pyq.png"></div>
+    <div class="share-wei share-weiBo"><img class="preload-M" src="images/weibo.png"></div>
+    <div class="uptop"><img class="preload-M" src="images/up.png"></div>
+</div>
+
+<!--弹窗-->
+<div class="dialog dialog-1" style="display:none;">
+    <div class="dialog-inner">
+        <div class="dialog-con">
+            <p class="dialog-con-t">抽奖介绍</p>
+            <p>每天抽奖限抽一次</p>
+            <p>通过炫耀党APP投票获得抽奖机会+3</p>
+            <p><a href="javascript:void(0)" class="dr" style="text-indent: -5px;">( 点击下载炫耀党APP )</a></p>
+            <p class="dialog-con-t hjname">获奖名单</p>
+            <div class="hjname-list">
+                <div>
+                    <div class="hjname-list-l">名字名字名字</div>
+                    <div class="hjname-list-r">奖品奖品奖品</div>
+                </div>
+                <div>
+                    <div class="hjname-list-l">名字名字名字名字</div>
+                    <div class="hjname-list-r">奖品奖品奖品奖品</div>
+                </div>
+                <div>
+                    <div class="hjname-list-l">名字名字名字</div>
+                    <div class="hjname-list-r">奖品奖品奖品</div>
+                </div>
+                <div>
+                    <div class="hjname-list-l">名字名字名字名字</div>
+                    <div class="hjname-list-r">奖品奖品奖品奖品</div>
+                </div>
+                <div>
+                    <div class="hjname-list-l">名字名字名字</div>
+                    <div class="hjname-list-r">奖品奖品奖品</div>
+                </div>
+                <div>
+                    <div class="hjname-list-l">名字名字名字名字</div>
+                    <div class="hjname-list-r">奖品奖品奖品奖品</div>
+                </div>
+                <div>
+                    <div class="hjname-list-l">名字名字名字名字名字</div>
+                    <div class="hjname-list-r">奖品奖品奖品奖品奖品</div>
+                </div>
+            </div>
+        </div>
+        <a href="javascript:hideDialog()" class="iknow">我知道了</a>
+    </div>
+</div>
+<script>
+    $(".uptop").click(function(){
+        $("html,body").animate({scrollTop:0},500);
+    })
+    $(".share-weiXin").click(function(){
+        $("body").append("<div class='shadow' onclick='removeShadow()'></div>");
+        document.addEventListener("touchmove",notouchmove,false);
+    });
+    function notouchmove(){
+        var e = event || window.event;
+        e.preventDefault();
+    }
+    function removeShadow(){
+        $(".shadow").remove();
+        document.removeEventListener("touchmove",notouchmove,false);
+    }
+    //显示弹窗
+    function showDialog(className){
+        $(".dialog").hide();
+        var jqo = $("."+className),
+                jqo_inner = jqo.find(".dialog-inner");
+        jqo.show();
+//        jqo_inner.css("margin-top",-0.5*jqo_inner.height())
+        document.addEventListener("touchmove",notouchmove,false);
+    }
+    //隐藏弹窗
+    function hideDialog(){
+        $(".dialog").hide();
+        document.removeEventListener("touchmove",notouchmove,false);
+    }
+</script>
+</body>
+
+<!--浮动元素视差效果-->
+<script src="js/libraries.min.js"></script>
+<script src="js/jquery.parallax.js"></script>
+<script>
+
+    //不要的话就注释掉
+    if (window.DeviceMotionEvent) {
+        window.addEventListener('devicemotion',function(){}, false);
+    }
+    //    $(".first").parallax();
+</script>
+<!--浮动元素视差 end-->
+<script src="js/wjsdwap-player.js"></script>
+<html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="zh-CN" id="html" >
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=200, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>《端午节，玩什么？》</title>
+	<link rel="stylesheet" href="../../../lib/confirm/confirm.css" />
+	<link rel="stylesheet" href="../css/reset.css" />
+	<style type="text/css">
+		html,body{max-width: 640px;margin: 0 auto;font-size: 20px;}
+		#wrap{width: 100%;overflow: hidden;position:relative;}
+		.bg-img{display: block;width: 100%;}
+		#topic {box-sizing: border-box;position: absolute;bottom: 0%;width: 100%;height: 60%;padding: 2% 10%;}
+		#topic li:last-child{border-bottom: 0px;}
+		.topic-content{box-sizing: border-box;width: 100%;height: 20%;float: left;border-bottom: 1px dashed #a8a8a8;padding: 5% 0;}
+		.content-img{float: left;width: 50%;height: 100%;}
+		.content{float: right;width: 45%;height: 100%;position: relative;}
+		.content-title{margin: 0;color: #FFFFFF;font-size: 1rem;overflow: hidden;display: -webkit-box;-webkit-line-clamp:2;-webkit-box-orient: vertical;}
+		.content-title p{font-size: 1.5rem;text-indent:1rem}
+		.content-body {  height: 30%;overflow: hidden}
+		.content-body img {float: left;width: 22%;height: 80%;border-radius: 50%;margin-top: 0.5rem}
+		.content-foot span{font-size: 1rem;line-height: 2.4rem;width: 30%;display: inline-block;}
+		.content-title img{width: 25%;height: 100%;margin-right:8%;border-radius: 50%;float: left}
+		.content-img img{width: 100%;height: 100%;border-radius: 5px;}
+		.content-foot{text-align: center;position: absolute;bottom: 0%;height: 30%;width: 100%;color: #FFFFFF;font-size: 1rem;}
+		#btn-like{display: inline-block;width: 50%;height: 85%;background: url("zan.png")no-repeat bottom ;background-size: 100%;}
+		.username{color:#ccc; font-size: 1rem;margin-top: 0.5rem;margin-left: 1rem;;display: inline-block;
+			overflow: hidden;
+			width: 60%;}
+	</style>
+</head>
+<body ng-app="myapp">
+<div id="wrap" ng-controller="customersCtrl" >
+	<img src="dw.png" class="bg-img"  />
+	<ul id="topic"  >
+ 		<li class="topic-content"  ng-repeat="x in message" >
+			<div class="content-img">
+				<img src="http://gamecircle-pic.oss-cn-beijing.aliyuncs.com/{{x.attachmentUrl}} " alt="topicimg"/>
+			</div>
+			<div class="content">
+				<div class="content-title">
+					<p ng-bind="x.content"></p>
+				</div>
+				<div class="content-body">
+					<img src="http://gamecircle-pic.oss-cn-beijing.aliyuncs.com/{{x.headPhoto}}" alt="user-icon">
+					<span class="username" ng-bind="x.nickName"></span>
+				</div>
+				<div class="content-foot">
+					<span ng-bind="x.likeCount"></span>
+					<button  id ="btn-like"></button>
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>
+<script src="../../../lib/jquery/js/jquery.min.js"></script>
+<script src="../../../lib/oss/aliyun-sdk.min.js"></script>
+<script src="../../../lib/oss/oss-js-upload.js"></script>
+<script src="../../../lib/md5/spark-md5.js"></script>
+<script src="../../report/report.js?d=1280977331177"></script>
+<script src="../../../lib/localresize/lrz.bundle.js"></script>
+<script src="../../../lib/emoji/emoji.js"></script>
+<script src="../../../lib/cryptojs/min.js?_d=1464599152024"></script>
+<script src="../../../lib/device/device.js?_d=1464599152024"></script>
+<script src="../../../lib/confirm/confirm.js"></script>
+<script src="../../../lib/upload/upload.js"></script>
+<!-- <script src="js.js?_d=1464599152038"></script> -->
+<script src="angular.min.js"></script>
+<script type="text/javascript">
+	//		rem布局设置
+	var win = document.getElementById('html');
+	var w = document.documentElement.clientWidth;
+	win.style.fontSize = w*0.03125 + 'px';
+	window.onresize = function(){
+		var w = document.documentElement.clientWidth;
+		win.style.fontSize = w*0.03125 + 'px';
+	}
+</script>
+<script>
+// var hostName = "http://10.205.20.8:7070/ApiWeb";
+var app = angular.module('myapp', []);
+app.service("productdata",function(){
+            return[
+				    {
+					  "success": "1",
+					  "code": "",
+					  "message": "获取成功",
+					  "notes": [
+								    {
+								      "noteId": "45317978059505665",
+								      "content": "%E5%A5%B3%E9%AC%BC%E7%8E%A9%E4%BA%86%E5%A5%BD%E5%A4%9A%E5%A4%A9%E4%BA%86%EF%BC%8C%E8%AF%B4%E5%AE%9E%E8%AF%9D%EF%BC%8C%E7%8E%A9%E4%B8%8D%E4%B8%8B%E5%8E%BB%E4%BA%86%E3%80%82",
+								      "bucket": "gamecircle-pic",
+								      "attachmentUrl": "86576fe5572f6d68f219c85ca7563857.jpg",
+								      "attachmentWidth": "0",
+								      "attachmentHeight": "0",
+								      "likeCount": "6",
+								      "hateCount": "0",
+								      "commentCount": "4",
+								      "userId": "45311441122754561",
+								      "gameId": "43460288737050625",
+								      "time": "20151120202154",
+								      "collectionCount": "0",
+								      "originNoteId": "0",
+								      "state": "0",
+								      "visible": "0"
+								    },
+								    {
+								      "noteId": "45317973764472833",
+								      "content": "%E6%AF%8F%E5%A4%A9%E7%9A%84%E6%97%A5%E5%B8%B8%E5%85%B6%E5%AE%9E%E6%B2%A1%E4%BB%99%E5%99%A8%E4%B9%9F%E5%8F%AF%E4%BB%A5%E7%9A%84%EF%BC%8C%E5%8F%AA%E8%A6%81%E5%BF%83%E6%80%81%E6%94%BE%E5%A5%BD",
+								      "bucket": "gamecircle-pic",
+								      "attachmentUrl": "c38052612df163e32f154374481a4877.jpg",
+								      "attachmentWidth": "0",
+								      "attachmentHeight": "0",
+								      "likeCount": "5",
+								      "hateCount": "0",
+								      "commentCount": "2",
+								      "userId": "45311432531771393",
+								      "gameId": "43460288737050625",
+								      "time": "20151120202153",
+								      "collectionCount": "0",
+								      "originNoteId": "0",
+								      "state": "0",
+								      "visible": "0"
+								    },
+								    {
+								      "noteId": "45317969469440001",
+								      "content": "%E6%88%91%E5%B0%B1%E6%98%AF%E6%B3%A1%E4%BB%99%EF%BC%8C%E6%80%8E%E4%B9%88%E5%8F%88%E8%83%BD%E8%BF%87%E5%9C%B0%E5%AE%AB%E5%9B%B0%E9%9A%BE%E5%91%A2",
+								      "bucket": "gamecircle-pic",
+								      "attachmentUrl": "5aedb3b124f7132b26dcfb2366049511.jpg",
+								      "attachmentWidth": "0",
+								      "attachmentHeight": "0",
+								      "likeCount": "6",
+								      "hateCount": "0",
+								      "commentCount": "1",
+								      "userId": "45311428236410881",
+								      "gameId": "43460288737050625",
+								      "time": "20151120202152",
+								      "collectionCount": "0",
+								      "originNoteId": "0",
+								      "state": "0",
+								      "visible": "0"
+								    },
+								    {
+								      "noteId": "45317969469374465",
+								      "content": "%E5%A6%88%E7%9A%84%EF%BC%8C30%E6%9C%B5%E8%8A%B1%E6%9F%93%E7%9A%84%E8%89%B2%E6%97%A0%E7%BC%98%E6%97%A0%E6%95%85%E5%8F%98%E8%89%B2%E4%BA%86%EF%BC%8C%E2%80%A8%E5%8D%A7%E6%A7%BD%E5%BD%93%E6%97%B6%E5%B8%82%E4%BB%B7180w%E4%B8%80%E6%9C%B5%E8%8A%B1%E4%B9%B0%E7%9A%84%2830%E6%9C%B5%29",
+								      "bucket": "gamecircle-pic",
+								      "attachmentUrl": "977de0ac7caa84c2a1fd302adbffa65c.jpg",
+								      "attachmentWidth": "0",
+								      "attachmentHeight": "0",
+								      "likeCount": "6",
+								      "hateCount": "0",
+								      "commentCount": "1",
+								      "userId": "45311436827197441",
+								      "gameId": "43460288737050625",
+								      "time": "20151120202152",
+								      "collectionCount": "0",
+								      "originNoteId": "0",
+								      "state": "0",
+								      "visible": "0"
+								    },
+								    {
+								      "noteId": "45317960879374337",
+								      "content": "%E4%BA%94%E8%A1%8C%E5%8D%87%E7%BA%A7%E6%9D%90%E6%96%99%EF%BC%9A%0A%E4%BA%94%E8%A1%8C%E5%8D%87%E7%BA%A7%E6%9D%90%E6%96%99%E5%88%86%E4%B8%BA%E4%BD%8E%E7%BA%A7%E4%BA%94%E7%81%B5%E7%8F%A0%EF%BC%8C%E9%AB%98%E7%BA%A7%E4%BA%94%E7%81%B5%E7%8F%A0%E3%80%82%0A%E4%BD%8E%E7%BA%A7%E4%BA%94%E7%81%B5%E7%8F%A0%E5%A2%9E%E5%8A%A01000%E4%BF%AE%E7%82%BC%E5%80%BC%EF%BC%8C%E9%AB%98%E7%BA%A7%E4%BA%94%E7%81%B5%E7%8F%A0%E5%A2%9E%E5%8A%A03000%E4%BF%AE%E7%82%BC%E5%80%BC%E3%80%82%0A%E4%BA%94%E7%81%B5%E7%8F%A0%E5%8F%88%E5%88%86%E4%B8%BA%E9%87%91%E6%9C%A8%E6%B0%B4%E7%81%AB%E5%9C%9F%E4%BA%94%E7%A7%8D%EF%BC%8C%E6%AF%8F%E7%A7%8D%E7%94%A8%E6%9D%A5%E6%8F%90%E5%8D%87%E5%AF%B9%E5%BA%94%E7%AD%89%E7%BA%A7%E3%80%82",
+								      "bucket": "gamecircle-pic",
+								      "attachmentUrl": "8e355dfae10cc9604283f44b3bf958b.jpg",
+								      "attachmentWidth": "0",
+								      "attachmentHeight": "0",
+								      "likeCount": "5",
+								      "hateCount": "0",
+								      "commentCount": "2",
+								      "userId": "45311445418835969",
+								      "gameId": "43460288737050625",
+								      "time": "20151120202150",
+								      "collectionCount": "0",
+								      "originNoteId": "0",
+								      "state": "0",
+								      "visible": "0"
+								    }
+					  			],
+					  "noteGeos": [],
+					  "userExts": [
+								    {
+								      "userId": "45311428236410881",
+								      "nickName": "%E5%8D%97%E6%B0%B4",
+								      "bucket": "gamecircle-pic",
+								      "headPhoto": "8a9a0488f3dc51d5818741359d86d23e.jpg",
+								      "credit": "10",
+								      "money": "0",
+								      "mood": "",
+								      "followCount": "46",
+								      "funsCount": "49",
+								      "noteCount": "843"
+								    },
+								    {
+								      "userId": "45311432531771393",
+								      "nickName": "%E5%B1%A0%E9%BE%99%E6%B8%85%E9%A3%8E",
+								      "bucket": "gamecircle-pic",
+								      "headPhoto": "6f5e1dda45fd187628036843e5047b3.jpg",
+								      "credit": "5",
+								      "money": "0",
+								      "mood": "",
+								      "followCount": "49",
+								      "funsCount": "68",
+								      "noteCount": "228"
+								    },
+								    {
+								      "userId": "45311436827197441",
+								      "nickName": "%E6%88%91%E5%96%9C%E6%AC%A2%E6%B0%B4%E7%85%AE%E8%9B%8B",
+								      "bucket": "gamecircle-pic",
+								      "headPhoto": "13c06f3149ea73e1dc37f03fe9a5201e.jpg",
+								      "credit": "6",
+								      "money": "0",
+								      "mood": "",
+								      "followCount": "52",
+								      "funsCount": "57",
+								      "noteCount": "1032"
+								    },
+								    {
+								      "userId": "45311441122754561",
+								      "nickName": "%E7%83%A8%E7%90%9B%E5%AD%A6%E9%95%BF",
+								      "bucket": "gamecircle-pic",
+								      "headPhoto": "1a31f9d4100d8d9513d2f36c48d2b4eb.jpg",
+								      "credit": "8",
+								      "money": "0",
+								      "mood": "",
+								      "followCount": "44",
+								      "funsCount": "61",
+								      "noteCount": "166"
+								    },
+								    {
+								      "userId": "45311445418835969",
+								      "nickName": "%E9%99%88%E5%A4%A7%E9%97%B9%E9%97%B9%E6%98%AF%E5%A4%A7%E7%8E%8B",
+								      "bucket": "gamecircle-pic",
+								      "headPhoto": "48d3f99d04970c16310b07cbe2fcb7bc.jpg",
+								      "credit": "5",
+								      "money": "0",
+								      "mood": "",
+								      "followCount": "0",
+								      "funsCount": "8",
+								      "noteCount": "59"
+								    }
+				 				  ]
+					}
+            	]
+			});
+
+
+app.controller('customersCtrl', function($scope, ) {
+
+	for(var i = 0; i < productdata.notes.length; i++) {
+				  productdata.notes[i].content=decodeURIComponent(productdata.notes[i].content);
+				  productdata.userExts[i].nickName=decodeURIComponent(productdata.userExts[i].nickName);
+			  }
+			  var a = productdata.notes;
+			  var b = productdata.userExts
+
+			  var c = [];
+			  var extend = function (o, n, override) {
+				  for (var p in n)if (n.hasOwnProperty(p) && (!o.hasOwnProperty(p) || override))o[p] = n[p];
+			  };
+			  for (var i = 0; i < a.length; i++) {
+				  extend(a[i],b[i]);
+			  }
+
+	$scope.message=productdata;
+
+
+
+
+
+
+
+  // $http.get(hostName+"/duanwu/getNotes")
+  // .success(function (response) {
+		// 	  for(var i = 0; i < response.notes.length; i++) {
+		// 		  response.notes[i].content=decodeURIComponent(response.notes[i].content);
+		// 		  response.userExts[i].nickName=decodeURIComponent(response.userExts[i].nickName);
+		// 	  }
+		// 	  var a = response.notes;
+		// 	  var b = response.userExts
+
+		// 	  var c = [];
+		// 	  var extend = function (o, n, override) {
+		// 		  for (var p in n)if (n.hasOwnProperty(p) && (!o.hasOwnProperty(p) || override))o[p] = n[p];
+		// 	  };
+		// 	  for (var i = 0; i < a.length; i++) {
+		// 		  extend(a[i],b[i]);
+		// 	  }
+		// 	  $scope.message = response.notes;
+
+  // });
+});
+
+
+
+
+
+
+
+
+</script>
+
+</body>
+</html>
+

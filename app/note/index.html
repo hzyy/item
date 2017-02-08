@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=200, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>炫耀党</title>
+<link rel="stylesheet" href="../../lib/confirm/confirm.css" />
+<link rel="stylesheet" href="css/style.css">
+<style type='text/css' id="danmustyle"></style>
+</head>
+<body>
+	<div class="body" style="position:fixed; top:0px;bottom:40px;overflow-y:scroll;background-color:#f1f1f1;width:100%;">
+		<div style="width:100%;max-width: 640px;min-width: 320px;min-height:100%;margin:0 auto;margin-bottom: 10px;">
+			<ul id="userinfo">
+				<li><img id="headPhoto"></li>
+				<li><span id="nickName">&nbsp;</span><br/><span id="stime"></span></li>
+				<li>
+					<div id="checked">
+						<form>
+							<input hidden="" type="checkbox" name="checked" onclick="toggleDanmuState()" class="checked" id="checked2" />
+							<label for="checked2" class="checked_wrap">
+								<span class="btn_radius" id="btn1"></span>
+								<div class="checked_box"></div>
+							</label>
+						</form>
+					</div>
+				</li>
+			</ul>
+		    <div id="content"></div>
+		    <div id="sharefrom" class="w"><span id="share"></span></div>
+	    	<div class="w" style="overflow:auto;">
+		    	<div id="operation">
+					<div class="abtn" id="btn-like">
+						<span class="font18" id="likeCount">0</span>
+						<div class="aside" class="like_">
+							<img src="images/zan.png"/>
+							<img src="images/smile.png"/>
+						</div>
+					</div>
+					<div class="abtn" id="btn-hate">
+						<div class="aside" class="hate_">
+							<img src="images/cry.png"/>
+							<img src="images/cai.png"/>
+						</div>
+						<span class="font18" id="hateCount">0</span>
+					</div>
+		    	</div>
+		    </div>
+		    <div class="w" style="padding: 0px 13px 5px 13px;">
+				<a href="http://a.app.qq.com/o/simple.jsp?pkgname=com.ymcx.gamecircle"><button id='download'><img src="images/download.png"/>&nbsp;下载炫耀党客户端</button></a>
+		    </div>
+		    <div class="w" style="padding:10px 13px 0px 13px;">
+				<div id="line"></div><div id="comsum">共<span id="commentCount">0</span>条评论</div><div></div>
+		    </div>
+		    <div class="w" id="comment" style="padding: 0px 13px;"></div>
+		</div>
+	</div>
+    <div id="footer">
+		<div style="width: 100%;max-width: 625px;min-width: 320px;margin:0 auto;background:white;border-top: 1px solid #E7E7E7;display: -webkit-box;color: rgb(255, 255, 255);">
+			<button class="commentLike"></button>
+			<button class="commentHate"></button>
+			<input type="text" id="answer" placeholder="&nbsp;&nbsp;来一发..." />
+			<input type="button" id="submit" value="发送" />
+		</div>
+	</div>
+    <script src="../../lib/jquery/js/jquery.min.js"></script>
+    <script src="../../lib/cryptojs/signature.js"></script>
+    <script src="../../lib/emoji/emoji.js"></script>
+    <script src="../../lib/confirm/confirm.js" ></script>
+	<script src="../../lib/sitestat/baidu.js"></script>
+	<script src="../../lib/common/common.js"></script>
+	<script src="../share/share.js?d=1475231766876"></script>
+	<script src="../api/api.js?d=1475231766876"></script>
+	<script src="js/carousel.min.js"></script>
+	<script src="js/imagedanmu.js?d=1475231766876"></script>
+	<script src="js/videodanmu.js?d=1475231766876"></script>
+	<script src="js/js.js?d=1475231766341"></script>
+</body>
+</html>

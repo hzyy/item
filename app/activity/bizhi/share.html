@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=200, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>留在屏幕上的精彩瞬间！</title>
+	<link rel="stylesheet" href="../css/reset.css" />
+	<style type="text/css">
+		html,body{
+			max-width: 640px;
+			margin: 0 auto;
+		}
+		#wrap{
+		  width: 100%;
+		  display: -webkit-box;
+		  -webkit-box-orient: vertical;
+		  overflow: hidden;
+		  position:relative;
+		}
+		#wrap img{
+		  display: block;
+		  width: 100%;
+		}
+		#btn {
+			position: absolute;
+			top: 24%;
+			width: 26.8%;
+			left: 38.1%;
+			height: 3.1%;
+			background: transparent;
+			margin-left: -1%;
+			border-radius: 10px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<img src="bizhi.jpg"/>
+		<button id="btn"></button>
+	</div>
+	<script>
+		var	btn1=document.getElementById("btn");
+		btn1.onclick=function(){
+			var ua = navigator.userAgent.toLowerCase();
+			if (/iphone|ipad|ipod/.test(ua)) {
+				window.open('http://itunes.apple.com/us/app/id1068393450');
+			} else if (/android/.test(ua)) {
+				window.open('http://download.youmengchuangxiang.com/android/specified/xuanyao.3.11.201610251503.apk')
+			}else{
+				window.open('http://site.youka.youmengchuangxiang.com/topic/195664284335559680')
+			}
+		}
+	</script>
+</body>
+</html>

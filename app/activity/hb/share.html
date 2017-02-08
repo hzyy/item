@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=200, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>CJ是啥子</title>
+<link rel="stylesheet" href="../../../lib/confirm/confirm.css" />
+<link rel="stylesheet" href="../css/reset.css" />
+<style type="text/css">
+html,body{
+max-width: 640px;
+margin: 0 auto;
+}
+#wrap{
+width: 100%;
+display: -webkit-box;
+-webkit-box-orient: vertical;
+overflow: hidden;
+position:relative;
+}
+#wrap img{
+display: block;
+width: 100%;
+}
+#btn {
+position: absolute;
+top: 9.9%;
+width: 41.8%;
+left: 31.1%;
+height: 1.8%;
+background: transparent;
+margin-left: -1%;
+border-radius: 10px;
+}
+</style>
+</head>
+<body>
+	<div id="wrap">
+		<img src="px.jpg"/>
+		<button id="btn"></button>
+	</div>
+	<script src="../../../lib/sitestat/baidu.js"></script>
+	<script src="../../../lib/mobile/mobile.js"></script>
+	<script>
+	var	btn1=document.getElementById("btn");
+			ua = navigator.userAgent.toLowerCase();
+		btn1.onclick=function(){
+			if (/iphone|ipad|ipod/.test(ua)) {
+				window.open('http://itunes.apple.com/us/app/id1068393450');
+			} else if (/android/.test(ua)) {
+				window.open('http://download.youmengchuangxiang.com/android/xuanyao.2.11.201605051120.apk')
+			}else{
+				window.open('http://www.youmengchuangxiang.com/product.html')
+			}
+		}
+</script>
+</body>
+</html>

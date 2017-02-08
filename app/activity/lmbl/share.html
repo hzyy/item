@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<title>联盟？还是部落？</title>
+	<link rel="stylesheet" href="../css/reset.css" />
+	<style type="text/css">
+		html,body{
+			max-width: 640px;
+			margin: 0 auto;
+		}
+		#wrap{
+		  width: 100%;
+		  display: -webkit-box;
+		  -webkit-box-orient: vertical;
+		  overflow: hidden;
+		  position:relative;
+		}
+		#wrap img{
+		  display: block;
+		  width: 100%;
+		}
+		#btn1 {
+			position: absolute;
+			top: 16.3%;
+			width: 34.8%;
+			left: 12.1%;
+			height: 4.1%;
+			background: transparent;
+			margin-left: -1%;
+			border-radius: 64px
+		}
+		#btn2 {
+			position: absolute;
+			top: 16.3%;
+			width: 34.8%;
+			left: 59.1%;
+			height: 4.1%;
+			background: transparent;
+			margin-left: -1%;
+			border-radius: 64px;
+		}
+		#btn3 {
+			position: absolute;
+			top: 93.3%;
+			width: 43.8%;
+			left: 28.1%;
+			height: 3.8%;
+			background: transparent;
+			margin-left: -1%;
+			border-radius: 64px;
+		}
+	</style>
+</head>
+<body>
+	<div id="wrap">
+		<img src="lm.jpg"/>
+		<a href="http://www.youmengchuangxiang.com/product.html"><button id="btn1"></button></a>
+		<a href="http://www.youmengchuangxiang.com/product.html"><button id="btn2"></button></a>
+		<a href="http://www.youmengchuangxiang.com/product.html"><button id="btn3"></button></a>
+	</div>
+	<script src="../../../lib/sitestat/baidu.js"></script>
+	<script src="../../../lib/mobile/mobile.js"></script>
+	<script type="text/javascript">
+		var	btn1=document.getElementById("btn1"),
+			btn2=document.getElementById("btn2"),
+			ah=document.getElementsByTagName("a");
+		btn1.onclick=function(){
+			var ua = navigator.userAgent.toLowerCase();
+			if (/iphone|ipad|ipod/.test(ua)) {
+				ah[0].removeAttribute("href");
+				window.open('http://itunes.apple.com/us/app/id1068393450');
+			} else if (/android/.test(ua)) {
+				ah[0].removeAttribute("href");
+				window.open('http://download.youmengchuangxiang.com/android/xuanyao.2.13.201605301713.apk')
+			}
+		}
+		btn2.onclick=function(){
+			var ua = navigator.userAgent.toLowerCase();
+			if (/iphone|ipad|ipod/.test(ua)) {
+				ah[1].removeAttribute("href");
+				window.open('http://itunes.apple.com/us/app/id1068393450');
+			} else if (/android/.test(ua)) {
+				ah[1].removeAttribute("href");
+				window.open('http://download.youmengchuangxiang.com/android/xuanyao.2.13.201605301713.apk')
+			}
+		}
+		btn3.onclick=function(){
+			var ua = navigator.userAgent.toLowerCase();
+			if (/iphone|ipad|ipod/.test(ua)) {
+				ah[2].removeAttribute("href");
+				window.open('http://itunes.apple.com/us/app/id1068393450');
+			} else if (/android/.test(ua)) {
+				ah[2].removeAttribute("href");
+				window.open('http://download.youmengchuangxiang.com/android/xuanyao.2.13.201605301713.apk')
+			}
+		}
+	</script>
+</body>
+</html>

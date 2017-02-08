@@ -1,0 +1,429 @@
+html,body{width:100%;height:100%;background:#11100e;}
+.bofh{overflow:hidden;}
+a,img,button,input,textarea,div,p,span,h1,h2,h3,h4,h5,h6,li,ul,dl,dt,dd{-webkit-tap-highlight-color:rgba(255,255,255,0);}
+
+.nav-en{font-size:7px;line-height:0.24rem;color:#b0995c;opacity: 0.37;text-align: center;}
+
+.page1,.page2{display:none;}
+.page-index{display:none;}
+/*.page2{transition:margin-top;-webkit-transition:margin-top;}*/
+
+.swiper-container{width:100%;height:100%;}
+.swiper-container .swiper-wrapper .swiper-slide{background:#11100e}
+/*首屏*/
+.first{width:100%;;background:#11100e;position:relative;overflow:hidden;}
+
+.first .fibg{position:absolute;left:0;top:0;width:100%;height:100%;}
+.first .fibg img{display:block;position:absolute;left:0;top:0;width:100%;}
+
+.first .bg1-star{position:absolute;left:0;top:0;width:100%;height:100%;}
+.first .bg1-pra{z-index: 997;}
+.first .bg1-star{z-index: 998;}
+.first .bg1-star .bg1-star1{position:absolute;width:0.97rem;height:0.88rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/star1.png") no-repeat center;background-size:100% 100%;top:7.58rem;left:5.36rem;}
+.first .bg1-star .bg1-star2{position:absolute;width:1.85rem;height:1.09rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/star2.png") no-repeat center;background-size:100% 100%;top:11.06rem;left:0;}
+.first .bg1-star .bg1-star3{position:absolute;width:1.45rem;height:1.41rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/star3.png") no-repeat center;background-size:100% 100%;top:11.93rem;right:0;}
+
+
+
+.first .INDEX{display:block;}
+.first .MODULE{display:none;}
+.first .fibg img.MODULE{display:none;}
+.first .fibg img.INDEX{display:block;}
+.first .first-con .hot.INDEX{display:block}
+.first .first-con .hot.MODULE{display:none}
+
+.first.MODULE .INDEX{display:none;}
+.first.MODULE .MODULE{display:block;}
+.first.MODULE .bg1-star1{display:none;}
+.first.MODULE .fibg img.INDEX{display:none;}
+.first.MODULE .fibg img.MODULE{display:block;}
+.first.MODULE .first-con .hot.INDEX{display:none}
+.first.MODULE .first-con .hot.MODULE{display:block}
+
+.single-a-logoA{width:1.98rem;height:1.06rem;display:block;margin:1.5rem auto 0;}
+.single-a-logoB{width:3.14rem;height:0.96rem;display:block;margin:4.2rem auto 0;}
+.single-a-logoC{width:3.36rem;height:1.04rem;display:block;margin:0.69rem auto 0;}
+.single-a-logoC img{display:block;width:100%;height:100%;}
+.first.MODULE .jswz{margin-top:0.35rem;}
+
+
+.star1{
+    animation:star1 6s ease 0s infinite both;
+    -webkit-animation:star1 6s ease 0s infinite both;
+}
+@keyframes star1 {
+    0%{opacity: 0;}
+    40%{opacity: 1;}
+    60%{opacity: 1;}
+    100%{opacity: 0;}
+}
+@-webkit-keyframes star1 {
+    0%{opacity: 0;}
+    40%{opacity: 1;}
+    60%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.star1.star2{
+    animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+}
+.star1.star3{
+    animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+}
+
+.first .first-con{width:100%;height:100%;overflow:hidden;position:relative;}
+.first .first-con{z-index: 999;}
+.first .first-con .hot{display:block;width:3.36rem;height:1.04rem;margin:5.87rem 0 0 2.09rem;}
+.first .first-con .hot img{display:block;width:100%;height:100%;}
+.first .first-con .t-tri{width:0.22rem;height:0.13rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/t-tri-i.png") no-repeat center;background-size:100% 100%;margin:0.37rem auto 0;}
+.tri-r1{
+    animation:tri-r1 2s linear 0s infinite both;
+    -webkit-animation:tri-r1 2s linear 0s infinite both;
+    transform-origin:50% 30%;
+    -webkit-transform-origin:50% 35%;
+}
+@keyframes tri-r1 {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+@-webkit-keyframes tri-r1 {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+
+.first .first-con .t-hdjs{width:100%;height:1.39rem;margin:0.61rem auto 0;overflow:hidden;}
+.t-hdjs .nav-en{margin-top:1.15rem;}
+.jswz{font-size: 15px;color:#928c86;line-height: 0.46rem;padding:0 0.68rem;margin-top:0.3rem;}
+.t-darrow{width:0.54rem;height:0.34rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/t-darrow.png") no-repeat center;background-size:100% 100%;position:absolute;left:50%;margin-left:-0.27rem;bottom:0.1rem;}
+
+.first.safari .fibg img{top:-0.9rem;}
+.first.safari .bg1-star .bg1-star1{top:6.68rem;}
+.first.safari .bg1-star .bg1-star2{top:10.16rem;}
+.first.safari .bg1-star .bg1-star3{top:11.03rem;}
+.first.safari .first-con .hot{margin-top:4.97rem;}
+.first.safari .single-a-logoA{margin-top:0.6rem;}
+
+.first.safari .fibg img{top:-0.4rem;}
+.first.safari .bg1-star .bg1-star1{top:7.18rem;}
+.first.safari .bg1-star .bg1-star2{top:10.66rem;}
+.first.safari .bg1-star .bg1-star3{top:11.53rem;}
+.first.safari .first-con .hot{margin-top:5.47rem;}
+.first.safari .single-a-logoA{margin-top:1.1rem;}
+
+
+/*loading*/
+.loading{width:100%;height:100%;background:#020201 url("http://n.sinaimg.cn/games/779860c8/20161124/bg-loading.jpg") no-repeat center;background-size:cover;position:relative;}
+.loading .circle{width:3.1rem;height:3.1rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/circle-1.png") no-repeat center;background-size:100% 100%;position:absolute;top:50%;left:50%;margin-left:-1.55rem;margin-top:-1.55rem;}
+.loading .circle-light{width:3.1rem;height:3.1rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/circle-2.png") no-repeat center;background-size:100% 100%;position:absolute;top:0;left:0;}
+.loading .loading-f{width:100%;height:100%;background:url("http://n.sinaimg.cn/games/779860c8/20161124/loading-f.png") no-repeat top;background-size:100% 50%;position:absolute;top:0;left:0;font-size: 13px;line-height: 0.77rem;color:#ffe4bb;text-align: center;}
+.loading .loading-f p{margin-top:50%;}
+@media (min-width: 376px) {
+    .loading .loading-f{font-size: 14px;}
+}
+.am-loading{
+    animation:am-loading 2s linear 0s infinite both;
+    -webkit-animation:am-loading 2s linear 0s infinite both;
+}
+@keyframes am-loading {
+    0%{transform:rotate(0deg)}
+    100%{transform:rotate(360deg)}
+}
+@-webkit-keyframes am-loading {
+    0%{-webkit-transform:rotate(0deg)}
+    100%{-webkit-transform:rotate(360deg)}
+}
+
+/*流程*/
+.liu-cheng{width:100%;background:#11100e url("http://n.sinaimg.cn/games/779860c8/20161125/bg-2-n.jpg") no-repeat top;background-size:100% ;
+    padding-bottom:0.86rem;
+}
+.liu-cheng-con{width:100%;height:100%;overflow:hidden;color:#a29b94;line-height:0.48rem;font-size:15px;}
+.liu-cheng-con .nav-en{margin-top:2.87rem;}
+.liu-cheng-con dl{margin-top:0.58rem;margin-left:0.2rem;}
+
+.liu-cheng-ddl{visibility: hidden;}
+
+.liu-cheng-con dl dt{margin:0.14rem 0 0.1rem;height:0.4rem;padding-left:0.44rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/icon-1.png") no-repeat left;background-size:0.44rem 0.4rem;}
+.liu-cheng-con dl dt i{display:block;width:2.5rem;height:0.4rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/date-1.png") no-repeat center;background-size: 100% 100%;}
+.liu-cheng-con dl dt i.date2{background-image:url("http://n.sinaimg.cn/games/779860c8/20161124/date-2.png");}
+.liu-cheng-con dl dt i.date3{background-image:url("http://n.sinaimg.cn/games/779860c8/20161124/date-3.png");}
+.liu-cheng-con dl dt i.date4{background-image:url("http://n.sinaimg.cn/games/779860c8/20161124/date-4.png");}
+.liu-cheng-con dl dd{border-left:1px solid rgba(102,99,94,0.8);margin-left:0.22rem;padding:0.12rem 0.65rem 0.62rem 0.33rem;text-align: justify}
+
+@media (max-width: 360px) {
+    .liu-cheng-con{line-height: 0.54rem;}
+    .liu-cheng-con dl{margin-top:0.62rem;}
+    .liu-cheng-con dl dd{padding-bottom:0.64rem;}
+}
+.liu-cheng-con dl dd:last-child{padding-bottom:0.4rem;}
+.liu-cheng-con dl dd .d-title{margin-bottom:0.22rem;}
+.liu-cheng-con dl dd .l-yq-title{margin-bottom:0.16rem;}
+.liu-cheng-con dl dd .l-yq a{display:block;width:1.98rem;height:0.7rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/btn-1.jpg") no-repeat center;background-size: 100% 100%;margin:0.26rem 0 0.08rem 0;}
+
+/*奖品*/
+.jiang-pin{width:100%;height:9.99rem;background:url("http://n.sinaimg.cn/games/779860c8/20161125/bg-3.jpg") no-repeat top;background-size:100% 100%;}
+.jiang-pin-con{width:100%;height:100%;overflow:hidden;}
+.jiang-pin-con .nav-en{margin-top:2.86rem;}
+.jiang-pin-con .jiangpin-s{overflow:auto;
+    /*margin-top:0.54rem;*/
+
+}
+.jiang-pin-con .jiangpin-s ul{width:18.28rem;
+    height:5.69rem;
+
+    padding-top:0.54rem;
+    overflow:hidden;
+}
+.jiang-pin-con .jiangpin-s ul li{width:4.26rem;height:5.15rem;;float:left;margin-right:0.42rem;font-size:13px;line-height: 0.36rem;color:#a2a2a2;background:url("http://n.sinaimg.cn/games/779860c8/20161124/j-1.png") no-repeat center;background-size:100% 100%;position:relative;}
+.jiang-pin-con .jiangpin-s ul li:nth-of-type(2){background-image: url("http://n.sinaimg.cn/games/779860c8/20161124/j-2.png");margin-right:0}
+.jiang-pin-con .jiangpin-s ul li:nth-of-type(3){background-image: url("http://n.sinaimg.cn/games/779860c8/20161124/j-3.png")}
+.jiang-pin-con .jiangpin-s ul li:nth-of-type(4){background-image: url("http://n.sinaimg.cn/games/779860c8/20161124/j-4.png")}
+
+.jiang-pin-con .jiangpin-s ul li p.l-title{font-size:16px;color:#d1b772;line-height: 0.68rem;}
+
+.jiang-pin-con .jiangpin-s ul li:nth-of-type(odd) p{padding:0 0.31rem 0 0.82rem;}
+.jiang-pin-con .jiangpin-s ul li:nth-of-type(odd) p.l-title{margin-top:0.5rem;text-align: right;}
+
+.jiang-pin-con .jiangpin-s ul li:nth-of-type(even) p{padding:0 0.82rem 0 0.31rem;}
+.jiang-pin-con .jiangpin-s ul li:nth-of-type(even) p.l-title{margin-top:2.74rem;;}
+
+.jiang-pin-con .jiangpin-s ul li:last-child{margin-right:0.2rem;}
+.jiang-pin-con .jiangpin-s ul li:first-child{margin-left:0.2rem;}
+.jiang-pin-con .jiangpin-s ul li img{display:block;position:absolute;}
+
+/*媒体*/
+.mei-ti-top{width:100%;height:3.62rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/bg4-1.jpg") no-repeat top;background-size:100% 100%;}
+.mei-ti-top-con{width:100%;height:100%;overflow:hidden;}
+.mei-ti-top-con .nav-en{margin-top:2.86rem;}
+
+.mei-ti-middle{width:100%;background:#1e1d1c;}
+.mei-ti-middle ul{margin-left:0.44rem;overflow:hidden;}
+.mei-ti-middle ul li{width:2rem;height:0.9rem;margin:0 0.3rem 0.2rem 0;float:left;}
+.mei-ti-middle ul li img{width:100%;height:100%;display:block;}
+
+.mei-ti-bottom{width:100%;height:0.92rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/bg4-2.jpg") no-repeat top;background-size:100% 100%;}
+
+/*下载*/
+.xia-zai{width:100%;height:6.01rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/bg-5.jpg") no-repeat top;background-size:100% 100%;color:#ffe8b8;text-align: center;font-size:15px;}
+.xia-zai-con{width:100%;height:100%;overflow:hidden;}
+.xia-zai-con-d{float:left;width:2.02rem;margin-top:1.2rem;margin-right:1.06rem;}
+.xia-zai-con-d:first-child{margin-left:1.17rem;}
+/*.xia-zai-con-d:last-child{margin-right:0;}*/
+.xia-zai-con-d .xia-zai-con-d-1{width:100%;height:2.02rem;}
+.xia-zai-con-d .xia-zai-con-d-1 img{width:100%;height:100%;display:block;}
+.xia-zai-con-d .xia-zai-con-d-2{height:0.82rem;line-height:0.82rem;}
+.xia-zai-con-d .xia-zai-con-d-3{width:100%;height:0.78rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/tri-down.png") no-repeat top;background-size:100% 100%;overflow:hidden;}
+.xia-zai-con-d .xia-zai-con-d-3 .xia-zai-con-d-3-i{width:0.27rem;height:0.32rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/tri-arrow.png") no-repeat top;background-size:100% 100%;margin:0.13rem auto 0;}
+
+/*底*/
+.foot{width:100%;height:1.9rem;background:url("http://n.sinaimg.cn/games/779860c8/20161124/foot.jpg") no-repeat top;background-size:100% 100%;}
+
+/*按钮*/
+.sus{width:1rem;height:3.4rem;position:fixed;bottom:1rem;right:0.2rem;z-index: 9998;display:none;}
+.sus.fadeIn{
+     animation:fadeIn 1s ease both;
+     -webkit-animation:fadeIn 1s ease both;
+ }
+@keyframes fadeIn {
+    0%{opacity:0}
+    100%{opacity:1}
+}
+@-webkit-keyframes fadeIn {
+    0%{opacity:0}
+    100%{opacity:1}
+}
+
+.sus img{display:block;width:100%;height:100%;}
+.share-wei{background:rgba(0,0,0,0.65);width:1rem;height:1rem;border-radius: 50%;-webkit-border-radius: 50%;margin-bottom:0.2rem;}
+.uptop{background:rgba(0,0,0,0.65);width:1rem;height:1rem;border-radius: 50%;-webkit-border-radius: 50%;}
+
+
+.shadow{position:fixed;width:100%;height:100%;top:0;left:0;background:rgba(0,0,0,0.8) url("http://n.sinaimg.cn/games/779860c8/20161125/share-sus.png") no-repeat top;background-size:7.5rem 6.72rem;z-index: 9998;
+    animation:shadow 0.3s ease both;
+    -webkit-animation:shadow 0.3s ease both;
+}
+@keyframes shadow {
+    0%{transform: scale(0.3);opacity:0}
+    100%{transform: scale(1);opacity:1}
+}
+@-webkit-keyframes shadow {
+    0%{-webkit-transform: scale(0.3);opacity:0}
+    100%{-webkit-transform: scale(1);opacity:1}
+}
+
+
+@media (max-width: 360px) {
+    .liu-cheng-con{font-size:13px}
+    .nav-en{font-size:6px;}
+    .jiang-pin-con .jiangpin-s ul li{font-size: 12px;}
+    .jiang-pin-con .jiangpin-s ul li p.l-title{font-size: 15px;}
+    .xia-zai{font-size:13px;}
+    .jswz{font-size:13px;}
+}
+@media (min-width: 376px) {
+    .liu-cheng-con{font-size:16px}
+    .jiang-pin-con .jiangpin-s ul li{font-size: 14px;}
+    .jiang-pin-con .jiangpin-s ul li p.l-title{font-size: 17px;}
+    .xia-zai{font-size:16px;}
+    .jswz{font-size:16px;}
+}
+
+
+/*******************************/
+/*首屏 - 火热报名*/
+.lyy-1{
+    animation:lyy-1 1s ease 0s both;
+    -webkit-animation:lyy-1 1s ease 0s both;
+}
+@keyframes lyy-1 {
+    0%{transform:scale(0.3);opacity:0;}
+    60%{transform:scale(1.2);opacity:1;}
+    100%{transform:scale(1);opacity:1;}
+}
+@-webkit-keyframes lyy-1 {
+    0%{-webkit-transform:scale(0.3);opacity:0;}
+    60%{-webkit-transform:scale(1.2);opacity:1;}
+    100%{-webkit-transform:scale(1);opacity:1;}
+}
+/*首屏 - 介绍文字*/
+.lyy-2{
+    animation:lyy-2 1s ease 0.3s both;
+    -webkit-animation:lyy-2 1s ease 0.3s both;
+}
+@keyframes lyy-2 {
+    0%{transform:translate3d(0,100%,0);opacity:0;}
+    100%{transform:translate3d(0,0,0);opacity:1;}
+}
+@-webkit-keyframes lyy-2 {
+    0%{-webkit-transform:translate3d(0,100%,0);opacity:0;}
+    100%{-webkit-transform:translate3d(0,0,0);opacity:1;}
+}
+/*首屏 - 箭头*/
+.lyy-3{
+    animation:lyy-3 1.2s linear 1.3s infinite both;
+    -webkit-animation:lyy-3 1.2s linear 1.3s infinite both;
+}
+@keyframes lyy-3 {
+    0%{transform:translate3d(0,-5px,0);}
+    50%{transform:translate3d(0,2px,0);}
+    100%{transform:translate3d(0,-5px,0);}
+}
+@-webkit-keyframes lyy-3 {
+    0%{-webkit-transform:translate3d(0,-5px,0);}
+    50%{-webkit-transform:translate3d(0,2px,0);}
+    100%{-webkit-transform:translate3d(0,-5px,0);}
+}
+/*第二页文字*/
+.lyy-4{display:block;}
+.lyy-4{
+    animation:lyy-4 1s ease 0s both;
+    -webkit-animation:lyy-4 1s ease 0s both;
+}
+@keyframes lyy-4 {
+    0%{transform:translate3d(-100%,0,0);opacity: 0;}
+    100%{transform:translate3d(0,0,0);opacity: 1;}
+}
+@-webkit-keyframes lyy-4 {
+    0%{transform:translate3d(-100%,0,0);opacity: 0;}
+    100%{transform:translate3d(0,0,0);opacity: 1;}
+}
+/*第二页奖品列表*/
+.jiangpin-s ul li{display:none;}
+.lyy-5{
+    animation:lyy-5 1s ease 0s both;
+    -webkit-animation:lyy-5 1s ease 0s  both;
+}
+@keyframes lyy-5 {
+    0%{transform:scale(0.3) rotate(-180deg);opacity: 0;}
+    100%{transform:scale(1) rotate(0deg);opacity: 1;}
+}
+@-webkit-keyframes lyy-5 {
+    0%{-webkit-transform:scale(0.3) rotate(-180deg);opacity: 0;}
+    100%{-webkit-transform:scale(1) rotate(0deg);opacity: 1;}
+}
+.lyy-5{
+    animation:lyy-5 1s ease 0s both;
+    -webkit-animation:lyy-5 1s ease 0s  both;
+}
+@keyframes lyy-5 {
+    0%{transform:scale(0.3) rotate(-180deg);opacity: 0;}
+    100%{transform:scale(1) rotate(0deg);opacity: 1;}
+}
+@-webkit-keyframes lyy-5 {
+    0%{-webkit-transform:scale(0.3) rotate(-180deg);opacity: 0;}
+    100%{-webkit-transform:scale(1) rotate(0deg);opacity: 1;}
+}
+/*首屏 - 箭头*/
+.lyy-6{
+    animation:lyy-6 1.2s linear 1.3s infinite both;
+    -webkit-animation:lyy-6 1.2s linear 1.3s infinite both;
+}
+@keyframes lyy-6 {
+    0%{transform:translate3d(0,-2px,0);}
+    50%{transform:translate3d(0,2px,0);}
+    100%{transform:translate3d(0,-2px,0);}
+}
+@-webkit-keyframes lyy-6 {
+    0%{-webkit-transform:translate3d(0,-2px,0);}
+    50%{-webkit-transform:translate3d(0,2px,0);}
+    100%{-webkit-transform:translate3d(0,-2px,0);}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
